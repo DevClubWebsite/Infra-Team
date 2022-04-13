@@ -15,6 +15,6 @@ Primary.args = {
 }
 export const Secondary = Template.bind({});
 Secondary.args = {
-    backgroundColor: 'black',
+    backgroundColor: '#000',
     label: 'Secondary'
 }
