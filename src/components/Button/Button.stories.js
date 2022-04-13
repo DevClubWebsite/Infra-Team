@@ -13,3 +13,7 @@ Primary.args = {
     label: 'Click Here!',
     backgroundColor: '#A37EF2'
 }
+export const Secondary = Template.bind({});
+Secondary.args = {
+    label: 'Secondary'
+}

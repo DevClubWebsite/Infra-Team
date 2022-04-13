@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyledButton } from './Button.styled';
 
-function Button({label}) {
+function Button({label, backgroundColor}) {
   return (
-    <StyledButton>
+    <StyledButton bg={backgroundColor}>
       {label}
     </StyledButton>
   )
