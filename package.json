@@ -1,8 +1,11 @@
 {
-  "name": "storybook",
-  "version": "0.1.0",
-  "private": true,
+  "name": "cdc-ds",
+  "version": "1.0.71",
+  "description": "Colman Dev Club Design System",
+  "main": "dist/bundle.js",
+  "private": false,
   "dependencies": {
+    "@rollup/plugin-commonjs": "^21.1.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^13.5.0",
@@ -14,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup --config",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -50,6 +53,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.2.1",
     "@storybook/addon-actions": "^6.4.21",
     "@storybook/addon-essentials": "^6.4.21",
     "@storybook/addon-interactions": "^6.4.21",
@@ -61,6 +69,12 @@
     "@storybook/react": "^6.4.21",
     "@storybook/testing-library": "^0.0.9",
     "chromatic": "^6.5.4",
+    "rollup": "^2.70.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "webpack": "^5.72.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
