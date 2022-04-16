@@ -1,6 +1,8 @@
 import React from "react";
 import { StyledNavbar } from "./Navbar.styled";
 import PropTypes from 'prop-types';
+import NavbarButton from '../NavbarButton/NavbarButton';
+import { v4 as uuidv4 } from "uuidv4";
 
 function Navbar({ items, direction = 'row', gap = 1 }) {
     return (
@@ -8,8 +10,8 @@ function Navbar({ items, direction = 'row', gap = 1 }) {
             <ul>
                 {items.map(item => {
                     return (
-                        <li>
-                            <a href={item[1]}>{item[0]}</a>
+                        <li key={uuidv4()}>
+                            <NavbarButton label={item.label} url={item.url}/>
                         </li>
                     )
                 })}
@@ -21,6 +23,6 @@ Navbar.propTypes = {
     items: PropTypes.array.isRequired,
     direction: PropTypes.oneOf(['row', 'column']),
     gap: PropTypes.number
-}
+};
 
 export default Navbar;
