@@ -23,3 +23,5 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
     }     
 `
+
+export default GlobalStyles;
