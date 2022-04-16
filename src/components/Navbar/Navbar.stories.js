@@ -6,8 +6,8 @@ export default {
     component: Navbar
 };
 const Template = args => <Navbar {...args} />
-export const Header = Template.bind({});
-Header.args = {
+export const Primary = Template.bind({});
+Primary.args = {
     items: [
         {label: 'Home', url: '#'},
         {label: 'About Us', url: '#'},

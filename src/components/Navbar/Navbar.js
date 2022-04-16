@@ -3,9 +3,11 @@ import { StyledNavbar } from "./Navbar.styled";
 import PropTypes from 'prop-types';
 import NavbarButton from '../NavbarButton/NavbarButton';
 import { v4 as uuidv4 } from "uuid";
+import GlobalStyles from "../../Theme/Global";
 
 function Navbar({ items, direction = 'row', gap = 1 }) {
-    return (
+    return <>
+        <GlobalStyles />
         <StyledNavbar direction={direction} gap={gap}>
             <ul>
                 {items.map(item => {
@@ -17,7 +19,7 @@ function Navbar({ items, direction = 'row', gap = 1 }) {
                 })}
             </ul>
         </StyledNavbar>
-    )
+    </>
 };
 Navbar.propTypes = {
     items: PropTypes.array.isRequired,
