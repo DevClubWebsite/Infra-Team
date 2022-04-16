@@ -1,6 +1,6 @@
 {
-  "name": "cdc-ds",
-  "version": "1.0.71",
+  "name": "@dev-club/ds",
+  "version": "1.0.0",
   "description": "Colman Dev Club Design System",
   "main": "dist/bundle.js",
   "private": false,
