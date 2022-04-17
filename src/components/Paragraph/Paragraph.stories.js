@@ -3,7 +3,7 @@ import Paragraph from "./Paragraph";
 import Theme from "../../Theme/Theme";
 
 export default {
-    title: "Paragraph",
+    title: "Text/Paragraph",
     component: Paragraph
 }
 
@@ -12,6 +12,6 @@ const Template = (args) => <Paragraph {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     label: "Lorem ipsum lorem ipsum",
-    size: "1",
+    size: "40",
     colour: Theme.colours.blue.primary
 }

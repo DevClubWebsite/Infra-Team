@@ -3,7 +3,7 @@ import HeaderParagraph from "./HeaderParagraph";
 import Theme from "../../Theme/Theme";
 
 export default {
-    title: "HeaderParagraph",
+    title: "Text/HeaderParagraph",
     component: HeaderParagraph
 }
 

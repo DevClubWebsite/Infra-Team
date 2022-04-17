@@ -9,7 +9,7 @@ export default function HeaderParagraph({ size, headerLabel, paragraphLabel, hea
             <Header label={headerLabel} size={sizes[size - 1]} colour={headerColour} />
             <Paragraph label={paragraphLabel} size={sizes[size - 1]} colour={paragraphColour} ></Paragraph>
         </>
-    )
+    );
 }
 
 HeaderParagraph.propTypes = {
