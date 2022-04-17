@@ -2,12 +2,19 @@ import React from "react";
 import { StyledNavbarButton } from "./NavbarButton.styled";
 import Theme from "../../Theme/Theme";
 
-export default function NavbarButton({ label, url, focused }) {
-    const colour = focused ? Theme.colours.yellow.primary : Theme.colours.blue.primary;
+export default function NavbarButton({ label, url, focusedElement, setFocusedElement, id }) {
+    const colour = focusedElement === id ? Theme.colours.yellow.primary : Theme.colours.blue.primary;
+
+    const changeColor = (id) => {
+        console.log(id)
+        setFocusedElement(id);
+    }
 
     return (
         <>
-            <StyledNavbarButton target="_blank" colour={colour} href={url}>{label}</StyledNavbarButton>
+            <StyledNavbarButton target="_blank" colour={colour} href={url} onClick={() => changeColor(id)}>
+                {label}
+            </StyledNavbarButton>
         </>
     )
 }
