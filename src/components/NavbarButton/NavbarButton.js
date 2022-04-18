@@ -9,8 +9,7 @@ export default function NavbarButton({
   setFocusedElement,
   id,
 }) {
-  const color =
-    focusedElement === id
+  const color = focusedElement === id
       ? Theme.typography.yellow
       : Theme.typography.white;
 
