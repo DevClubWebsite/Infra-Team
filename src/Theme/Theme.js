@@ -7,6 +7,9 @@ const Theme = {
         },
         yellow: {
             primary: "#F6C927"
+        },
+        white: {
+            primary: "#ffffff"
         }
     }
 }

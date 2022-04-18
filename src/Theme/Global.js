@@ -8,11 +8,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         font-size: 18px;
     }
-
-    body {
-        background-color: ${Theme.colours.blue.off}
-    }
-
+    
     ul {
         list-style: none;
     }
