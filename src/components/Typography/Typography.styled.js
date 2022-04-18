@@ -1,10 +1,13 @@
 import styled, { css } from "styled-components";
 
-export const StyledTypography = styled.h1`
-    color: ${({ color }) => color};
-    ${({ weight }) => {
-        weight && css`
-            font-weight: ${weight};
-        `;
-    }}
-`;
+export const StyledTypography = ({ ...props }) => {
+    const Container = styled(props.variant)`
+        color: ${( props ) => props.color};
+        ${( props ) => {
+            props.weight && css`
+                font-weight: ${props.weight};
+            `;
+        }}
+    `
+    return <Container {...props} />
+}

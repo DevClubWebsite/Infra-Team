@@ -5,7 +5,6 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin: 0;
         font-family: 'Poppins', sans-serif;
-        font-size: 18px;
     }
     
     ul {
@@ -18,6 +17,30 @@ const GlobalStyles = createGlobalStyle`
 
     button {
         border:none;
+    }
+
+    h1 {
+        2rem;
+    }
+
+    h2 {
+        1.5rem;
+    }
+
+    h3 {
+        1.17rem;
+    }
+    
+    h4 {
+        1rem;
+    }
+
+    h5 {
+        0.83rem;
+    }
+
+    h6 {
+        0.67rem;
     }
 `;
 

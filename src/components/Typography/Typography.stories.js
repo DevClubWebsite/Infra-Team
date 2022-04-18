@@ -10,7 +10,7 @@ export const Text = Template.bind({});
 
 Text.args = {
     label: "Topography is the study of the forms and features of land surfaces. ",
-    variant: "p",
+    variant: "h1",
     color: "black",
     weight: 400
 }
