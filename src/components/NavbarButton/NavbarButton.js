@@ -3,7 +3,7 @@ import { StyledNavbarButton } from "./NavbarButton.styled";
 import Theme from "../../Theme/Theme";
 
 export default function NavbarButton({ label, url, focusedElement, setFocusedElement, id }) {
-    const colour = focusedElement === id ? Theme.colours.yellow.primary : Theme.colours.blue.primary;
+    const colour = focusedElement === id ? Theme.colours.yellow.primary : Theme.colours.white.primary;
 
     const changeColor = (id) => {
         console.log(id)
