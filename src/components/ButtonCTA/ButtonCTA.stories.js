@@ -4,12 +4,6 @@ import ButtonCTA from "./ButtonCTA";
 export default {
   title: "Button/CTA",
   component: ButtonCTA,
-  argTypes: {
-    size: {
-      options: ["reg", "mobile"],
-      control: { type: "radio" },
-    },
-  },
 };
 
 const Template = (args) => <ButtonCTA {...args} />;
