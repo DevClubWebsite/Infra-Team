@@ -10,13 +10,10 @@ const Template = args => <NavbarButton {...args} />
 export const Focused = Template.bind({});
 Focused.args = {
     label: "YouTube",
-    url: "www.youtube.com",
-    focused: true
-
+    url: "www.youtube.com"
 }
 export const Unfocused = Template.bind({});
 Unfocused.args = {
     label: "Google",
-    url: "www.google.com",
-    focused: false
+    url: "www.google.com"
 }
