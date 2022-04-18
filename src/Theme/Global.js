@@ -1,9 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    
     * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
+    }
+
+    :root {
+        font-size: 18px;
+    }
+
+    html {
         font-family: 'Poppins', sans-serif;
     }
     
@@ -19,29 +28,6 @@ const GlobalStyles = createGlobalStyle`
         border:none;
     }
 
-    h1 {
-        2rem;
-    }
-
-    h2 {
-        1.5rem;
-    }
-
-    h3 {
-        1.17rem;
-    }
-    
-    h4 {
-        1rem;
-    }
-
-    h5 {
-        0.83rem;
-    }
-
-    h6 {
-        0.67rem;
-    }
 `;
 
 export default GlobalStyles;
