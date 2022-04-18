@@ -34,8 +34,7 @@
     "@storybook/testing-library": "^0.0.9",
     "chromatic": "^6.5.4",
     "rollup": "^2.70.2",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "webpack": "^5.72.0"
+    "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "peerDependencies": {
     "react": "^18.0.0",

@@ -9,10 +9,10 @@ export default function NavbarButton({
   setFocusedElement,
   id,
 }) {
-  const colour =
+  const color =
     focusedElement === id
-      ? Theme.colors.yellow.primary
-      : Theme.colors.white.primary;
+      ? Theme.typography.yellow
+      : Theme.typography.white;
 
   const changeColor = (id) => {
     console.log(id);
@@ -23,7 +23,7 @@ export default function NavbarButton({
     <>
       <StyledNavbarButton
         target="_blank"
-        colour={colour}
+        colour={color}
         href={url}
         onClick={() => changeColor(id)}
       >

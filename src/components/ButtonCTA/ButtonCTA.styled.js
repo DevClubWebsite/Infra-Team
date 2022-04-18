@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import Colors from "../../Theme/Theme";
+import Theme from "../../Theme/Theme";
 
 export const StyledButtonCTA = styled.button`
   display: flex;
@@ -7,7 +7,7 @@ export const StyledButtonCTA = styled.button`
   justify-content: space-between;
   left: 232px;
   top: 496px;
-  background: ${Colors.colors.yellow.primary};
+  background: ${Theme.background.yellow};
   border-radius: 5px;
   padding: 0 5px 0 15px;
   width: 278px;
@@ -27,6 +27,6 @@ export const ArrowDiv = styled.div`
   height: 49px;
   left: 425px;
   top: 499px;
-  background: ${Colors.colors.blue.tertiary};
+  background: ${Theme.background.dark};
   border-radius: 5px;
 `;

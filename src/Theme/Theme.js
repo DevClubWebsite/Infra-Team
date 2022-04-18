@@ -4,7 +4,7 @@ const Theme = {
     light: "#0A0A1B",
     yellow: "#F6C927"
   },
-  topography: {
+  typography: {
     white: "#FFFFFF",
     yellow: "#F6C927",
     dark: "#0A0A1B",
