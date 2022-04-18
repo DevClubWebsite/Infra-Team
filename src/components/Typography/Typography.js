@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import GlobalStyles from "../../Theme/Global";
 
 export default function Typography({ label, variant, color, weight }) {
-
     return (
         <>
             <GlobalStyles />
