@@ -1,18 +1,15 @@
 const Theme = {
-  colors: {
-    blue: {
-      primary: "#21213E",
-      secondary: "#121231",
-      tertiary: "#040413",
-      off: "#0A0A1B",
-    },
-    yellow: {
-      primary: "#F6C927",
-    },
-    white: {
-      primary: "#ffffff",
-    },
+  background: {
+    dark: "#040413",
+    light: "#0A0A1B",
+    yellow: "#F6C927"
   },
+  topography: {
+    white: "#FFFFFF",
+    yellow: "#F6C927",
+    dark: "#0A0A1B",
+    darker: "#0E0E28"
+  }
 };
 
 export default Theme;
