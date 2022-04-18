@@ -10,7 +10,7 @@ function ButtonCTA({ label, size = "reg" }) {
       <GlobalStyles />
       <StyledButtonCTA size={size}>
         <p>{label}</p>
-        <ArrowDiv>
+        <ArrowDiv size={size}>
           <img src={Arrow} alt="arrow" />
         </ArrowDiv>
       </StyledButtonCTA>
