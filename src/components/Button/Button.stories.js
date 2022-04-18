@@ -19,7 +19,7 @@ Regular.args = {
 export const Outlined = Template.bind({});
 Outlined.args = {
   variant: "outlined",
-  background: Theme.background.dark,
+  background: "none",
   color: Theme.background.yellow,
   label: "click me!",
   size: "medium",
