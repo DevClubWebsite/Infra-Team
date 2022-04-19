@@ -17,10 +17,10 @@ npm install @dev-club/ds
 import { Example } from '@dev-club/ds';
 
 function foo() {
-   return (
-      // use the imported component
-      <Example />
-   )
+    return (
+        // use the imported component
+        <Example />
+    )
 };
 ```
 
@@ -31,7 +31,7 @@ You can see the components and test their different options using [Storybook](ht
 ### Button
 ##### Attributes:
 
-| Attribute | Type | Options | Auto | required |
+| Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
 | label | String | - | - | True |
 | variant | String | "regular", "outlined", "text" | "regular" | False |
@@ -44,16 +44,16 @@ You can see the components and test their different options using [Storybook](ht
 import { Button } from '@dev-club/ds';
 
 function foo() {
-   return (
-      <Button variant="outlined" label="Click Here!" />
-   )
+    return (
+        <Button variant="outlined" label="Click Here!" />
+    )
 };
 ```
 
 ### ButtonCTA
 ##### Attributes:
 
-| Attribute | Type | Options | Auto | required |
+| Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
 | label | String | - | - | True |
 | size | String | "regular", "mobile" | "regular" | False |
@@ -63,16 +63,16 @@ function foo() {
 import { ButtonCTA } from '@dev-club/ds';
 
 function foo() {
-   return (
-      <Button label="Click Here!" size="mobile" />
-   )
+    return (
+        <Button label="Click Here!" size="mobile" />
+    )
 };
 ```
 
 ### Typography
 ##### Attributes:
 
-| Attribute | Type | Options | Auto | required |
+| Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
 | label | String | - | - | True |
 | variant | String | "p", "h1"-"h6" | - | True |
@@ -84,16 +84,16 @@ function foo() {
 import { Typography } from '@dev-club/ds';
 
 function foo() {
-   return (
-      <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
-   )
+    return (
+        <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
+    )
 };
 ```
 
 ### Navbar
 ##### Attributes:
 
-| Attribute | Type | Options | Auto | required |
+| Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
 | items | Array | - | - | True |
 | direction | String | "row", "column" | "row" | False |
@@ -104,18 +104,18 @@ function foo() {
 import { Navbar } from '@dev-club/ds';
 
 function foo() {
-   const arr = [
-      {label: 'Home', url: https://www.npmjs.com/package/@dev-club/ds},
-      {label: 'About Us, url: https://www.npmjs.com/package/@dev-club/ds}
-   ];
-   return (
-      <Navbar items={arr} gap=2 />
-   )
+    const arr = [
+        {label: 'Home', url: 'https://www.npmjs.com/package/@dev-club/ds'},
+        {label: 'About Us', url: 'https://www.npmjs.com/package/@dev-club/ds'}
+    ];
+    return (
+        <Navbar items={arr} gap={2} />
+    )
 };
 ```
 ### Card
 #### Attributes:
-| Attribute | Type | Options | Auto | required |
+| Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
 | size | String | "small", "medium", "large" | "medium" | False |
 | color | String | - | Yellow | False |
@@ -125,9 +125,9 @@ function foo() {
 import { Card } from "@dev-club/ds";
 
 function foo() {
-   return (
-      <Card size="medium" color="#000000"></Card>
-   );
+    return (
+        <Card size="medium" color="#000000"></Card>
+    );
 }
 ```
 ### Theme
@@ -148,9 +148,9 @@ function foo() {
 import { Theme } from '@dev-club/ds';
 
 function foo() {
-   return (
-      <Button label="Click Here!" color={Theme.background.yellow}/>
-   )
+    return (
+        <Button label="Click Here!" color={Theme.background.yellow}/>
+    )
 };
 ```
 ---
