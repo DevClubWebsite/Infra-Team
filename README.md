@@ -113,7 +113,23 @@ function foo() {
    )
 };
 ```
+### Card
+#### Attributes:
+| Attribute | Type | Options | Auto | required |
+| --------- | ---- | ------- | ---- | -------- |
+| size | String | "small", "medium", "large" | "medium" | False |
+| color | String | - | Yellow | False |
 
+##### Example:
+```js
+import { Card } from "@dev-club/ds";
+
+function foo() {
+   return (
+      <Card size="medium" color="#000000"></Card>
+   );
+}
+```
 ### Theme
 ##### Options:
 
