@@ -10,7 +10,8 @@ const Template = (args) => <Card {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-    width: 465,
-    height: 300,
-    color: "#F6C927"
+    width: 12.222,
+    height: 14.222,
+    color: "#F6C927",
+    border: "#191943"
 }

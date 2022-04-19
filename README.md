@@ -117,7 +117,7 @@ function foo() {
 #### Attributes:
 | Attribute | Type | Options | Auto | required |
 | --------- | ---- | ------- | ---- | -------- |
-| size | String | "small", "medium", "large" | "medium" | False |
+| width | String | - | 12.222 | | False |
 | color | String | - | Yellow | False |
 
 ##### Example:
