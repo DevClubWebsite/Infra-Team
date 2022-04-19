@@ -117,17 +117,21 @@ function foo() {
 #### Attributes:
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
-| width | String | - | 12.222 | | False |
-| color | String | - | Yellow | False |
+| width | String | - | 12.222 | False |
+| height | String | - | 14.222 | False |
+| color | String | - | Theme.background.yellow | False |
+| border | String | - | Theme.background.light | False |
 
 ##### Example:
 ```js
 import { Card } from "@dev-club/ds";
 
 function foo() {
-    return (
-        <Card size="medium" color="#000000"></Card>
-    );
+   return (
+      <Card width="12.222" height="14.222" color="#000000" border="#FFFFFF">
+         <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
+      </Card>
+   );
 }
 ```
 ### Theme

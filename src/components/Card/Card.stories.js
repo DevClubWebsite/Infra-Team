@@ -12,6 +12,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     width: 12.222,
     height: 14.222,
-    color: "#F6C927",
-    border: "#191943"
+    color: Theme.background.yellow,
+    border: Theme.background.light
 }
