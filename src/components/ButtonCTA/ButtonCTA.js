@@ -4,7 +4,7 @@ import { ArrowDiv, StyledButtonCTA } from "./ButtonCTA.styled";
 import GlobalStyles from "../../Theme/Global";
 import Arrow from "../../Images/yellow-arrow-icon.svg";
 
-function ButtonCTA({ label, size = "reg" }) {
+function ButtonCTA({ label, size = "regular" }) {
   return (
     <>
       <GlobalStyles />
@@ -19,7 +19,7 @@ function ButtonCTA({ label, size = "reg" }) {
 }
 ButtonCTA.propTypes = {
   label: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(["reg", "mobile"]),
+  size: PropTypes.oneOf(["regular", "mobile"]),
 };
 
 export default ButtonCTA;

@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# @devClub/ds
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Colman Dev Club Design System
+---
 
-## Available Scripts
+[NPM Package](https://www.npmjs.com/package/@dev-club/ds)
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+```
+npm install @dev-club/ds
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
+```js
+// import a component
+import { Example } from '@dev-club/ds';
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+function foo() {
+   return (
+      // use the imported component
+      <Example />
+   )
+};
+```
 
-### `npm test`
+## Components
+You can see the components and test their different options using [Storybook](https://6256f0c55149c8003a14e401-xjbjxabejy.chromatic.com/
+).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Button
+##### Attributes:
 
-### `npm run build`
+| Attribute | Type | Options | Auto | required |
+| --------- | ---- | ------- | ---- | -------- |
+| label | String | - | - | True |
+| variant | String | "regular", "outlined", "text" | "regular" | False |
+| size | String | "small", "medium", "large" | "medium" | False |
+| background | String | - | - | False |
+| color | String | - | - | False |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Example:
+```js
+import { Button } from '@dev-club/ds';
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+function foo() {
+   return (
+      <Button variant="outlined" label="Click Here!" />
+   )
+};
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ButtonCTA
+##### Attributes:
 
-### `npm run eject`
+| Attribute | Type | Options | Auto | required |
+| --------- | ---- | ------- | ---- | -------- |
+| label | String | - | - | True |
+| size | String | "regular", "mobile" | "regular" | False |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##### Example:
+```js
+import { ButtonCTA } from '@dev-club/ds';
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function foo() {
+   return (
+      <Button label="Click Here!" size="mobile" />
+   )
+};
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Typography
+##### Attributes:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Attribute | Type | Options | Auto | required |
+| --------- | ---- | ------- | ---- | -------- |
+| label | String | - | - | True |
+| variant | String | "p", "h1"-"h6" | - | True |
+| color | String | - | - | True |
+| weight | Number | - | - | False |
 
-## Learn More
+##### Example:
+```js
+import { Typography } from '@dev-club/ds';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+function foo() {
+   return (
+      <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
+   )
+};
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Navbar
+##### Attributes:
 
-### Code Splitting
+| Attribute | Type | Options | Auto | required |
+| --------- | ---- | ------- | ---- | -------- |
+| items | Array | - | - | True |
+| direction | String | "row", "column" | "row" | False |
+| gap | Number | - | 1 | False |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##### Example:
+```js
+import { Navbar } from '@dev-club/ds';
 
-### Analyzing the Bundle Size
+function foo() {
+   const arr = [
+      {label: 'Home', url: https://www.npmjs.com/package/@dev-club/ds},
+      {label: 'About Us, url: https://www.npmjs.com/package/@dev-club/ds}
+   ];
+   return (
+      <Navbar items={arr} gap=2 />
+   )
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Theme
+##### Options:
 
-### Making a Progressive Web App
+| Option | hex |
+| ------ | --- |
+| Theme.background.dark | #040413 |
+| Theme.background.light | #0A0A1B |
+| Theme.background.yellow | #F6C927 |
+| Theme.typography.white | #FFFFFF | 
+| Theme.typography.yellow | #F6C927 |
+| Theme.typography.dark | #0A0A1B |
+| Theme.typography.darker | #0E0E28 |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+```js
+import { Theme } from '@dev-club/ds';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+function foo() {
+   return (
+      <Button label="Click Here!" color={Theme.background.yellow}/>
+   )
+};
+```
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
