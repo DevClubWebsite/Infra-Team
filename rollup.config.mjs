@@ -1,8 +1,8 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
-import jsx from "@babel/plugin-syntax-jsx";
 import PeerDepsExternalPlugin from "rollup-plugin-peer-deps-external";
+import image from '@rollup/plugin-image';
 
 export default {
   input: "src/index.js",
@@ -18,7 +18,7 @@ export default {
       exclude: "node_modules/**",
     }),
     PeerDepsExternalPlugin(),
-    jsx(),
+    image(),
     commonjs(),
   ],
 };

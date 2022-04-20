@@ -1,6 +1,6 @@
 {
   "name": "@dev-club/ds",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Colman Dev Club Design System",
   "main": "dist/bundle.js",
   "private": false,
@@ -22,6 +22,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.2.1",
     "@storybook/addon-actions": "^6.4.21",
     "@storybook/addon-essentials": "^6.4.21",
