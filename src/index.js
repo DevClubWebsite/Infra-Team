@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Theme from './Theme/Theme';
 import Typography from './components/Typography/Typography';
 import Card from './components/Card/Card';
+import GlobalStyles from './Theme/Global';
 
 export {
   Button,
@@ -11,5 +12,6 @@ export {
   Navbar,
   Typography,
   Card,
-  Theme
+  Theme,
+  GlobalStyles
 }
