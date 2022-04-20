@@ -4,6 +4,7 @@ export const StyledButton = styled.button`
   width: 6.777em;
   height: 1.777em;
   border-radius: 0.277rem;
+  border: none;
   background: ${({ background }) => background};
   color: ${({ color }) => color};
   ${({ variant }) =>

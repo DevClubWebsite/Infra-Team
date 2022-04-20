@@ -10,6 +10,7 @@ export const StyledButtonCTA = styled.button`
   padding: 0 0.227rem 0 0.833rem;
   width: 15.444em;
   height: 3.055em;
+  border: none;
   ${(props) =>
     props.size === "mobile" &&
     css`
