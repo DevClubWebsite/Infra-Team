@@ -147,7 +147,7 @@ function foo() {
 | Theme.typography.dark | #0A0A1B |
 | Theme.typography.darker | #0E0E28 |
 
-
+##### Example:
 ```js
 import { Theme } from '@dev-club/ds';
 
@@ -157,6 +157,24 @@ function foo() {
     )
 };
 ```
+
+### GlobalStyles
+This component includes CSS that should be used in all components.
+
+##### Example:
+```js
+import { Button, GlobalStyles } from '@dev-club/ds';
+
+function foo() {
+    return (
+        <>
+            <GlobalStyles />
+            <Button variant="outlined" label="Click Here!" />
+        <>
+    )
+};
+```
+
 ---
 
 ## License
