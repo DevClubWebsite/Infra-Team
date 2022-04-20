@@ -14,11 +14,16 @@ export const StyledButton = styled.button`
   ${({ size }) =>
     size === "small" &&
     css`
-      font-size: 0.75rem;
+      font-size: 0.5rem;
     `}
     ${({ size }) =>
     size === "large" &&
     css`
-      font-size: 1.25rem;
+      font-size: 1.5rem;
+    `}
+    ${({ size }) =>
+    size === "extraLarge" &&
+    css`
+      font-size: 2rem;
     `}
 `;

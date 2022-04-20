@@ -31,6 +31,6 @@ Button.propTypes = {
   background: PropTypes.string,
   color: PropTypes.string,
   variant: PropTypes.oneOf(["regular", "outlined", "text"]),
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOf(["small", "medium", "large", "extraLarge"]),
 };
 export default Button;

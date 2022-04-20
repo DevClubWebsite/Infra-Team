@@ -35,7 +35,7 @@ You can see the components and test their different options using [Storybook](ht
 | --------- | ---- | ------- | ---- | -------- |
 | label | String | - | - | True |
 | variant | String | "regular", "outlined", "text" | "regular" | False |
-| size | String | "small", "medium", "large" | "medium" | False |
+| size | String | "small", "medium", "large", "extraLarge" | "medium" | False |
 | background | String | - | - | False |
 | color | String | - | - | False |
 
