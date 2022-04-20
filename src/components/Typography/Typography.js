@@ -1,6 +1,7 @@
 import { StyledTypography } from "./Typography.styled";
 import PropTypes from "prop-types";
 import GlobalStyles from "../../Theme/Global";
+import React from "react";
 
 export default function Typography({ label, variant, color, weight }) {
     return (
