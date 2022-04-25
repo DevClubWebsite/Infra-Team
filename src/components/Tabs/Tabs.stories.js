@@ -11,8 +11,8 @@ export const Primary = Template.bind({});
 Primary.storyName = 'Tabs - not ready';
 Primary.args = {
     tabs: [
-        {label: 'x', content: 'x'},
-        {label: 'y', content: 'y'}
+        {label: 'Tab 1', content: 'Content 1'},
+        {label: 'Tab 2', content: 'Content 2'}
     ],
     tabSize: 'medium',
     tabGap: 1,

@@ -2,6 +2,8 @@ import { Tab } from '@headlessui/react';
 import { StyledTabs } from './Tabs.styled';
 import GlobalStyles from "../../Theme/Global";
 import PropTypes from "prop-types";
+import Typography from '../Typography/Typography';
+import Theme from '../../Theme/Theme';
 
 export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection = 'row'}) {
     const StyledTab = StyledTabs(Tab);
@@ -20,7 +22,7 @@ export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection
                     return <StyledTab
                     tabSize={tabSize}
                     >
-                        {tab.label}
+                        <Typography label={tab.label} color={Theme.typography.white} variant='h2' />
                     </StyledTab>
                 })}
             </StyledTabList>

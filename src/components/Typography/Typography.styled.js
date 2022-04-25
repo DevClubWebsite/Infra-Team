@@ -9,6 +9,13 @@ export const StyledTypography = ({ ...props }) => {
                 font-weight: ${props.weight};
             `;
         }}
+        ${({size}) => {
+            if (size) {
+                return css`
+                    font-size: ${size}rem;
+                `
+            }
+        }}
     `
     return <Container {...props} />
 }

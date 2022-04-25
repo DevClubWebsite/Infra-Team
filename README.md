@@ -78,6 +78,7 @@ function foo() {
 | variant | String | "p", "h1"-"h6" | - | True |
 | color | String | - | - | True |
 | weight | Number | - | - | False |
+| size | Number | - | - | False |
 
 ##### Example:
 ```js

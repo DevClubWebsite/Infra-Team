@@ -9,13 +9,14 @@ export const StyledTabs = (variant) => {
             flex-direction: ${({tabDirection}) => `${tabDirection};`}
             gap: ${({tabGap}) => `${tabGap}rem;`}            
         `
-    }
+    };
 
     if (variant === Tab) {
         return styled(variant)`
             border-radius: 0.555rem;
             width: 3.8rem;
             height: 1.9rem;
+            background-color: ;
             ${({tabSize}) => {
                 if (tabSize === 'medium') {
                     return css`
@@ -29,13 +30,12 @@ export const StyledTabs = (variant) => {
                     `
                 }
             }}
-            color: red;
         `
-    }
+    };
     
     if (variant === Tab.Panel) {
         return styled(variant)`
         color: blue;
     `
-    }
+    };
 };
