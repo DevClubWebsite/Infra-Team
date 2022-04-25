@@ -2,15 +2,16 @@ import { Tab } from '@headlessui/react';
 import { StyledTabs } from './Tabs.styled';
 import GlobalStyles from "../../Theme/Global";
 
-export default function Tabs({tabs, tabSize = 'medium',}) {
+export default function Tabs({tabs, tabSize = 'medium', tabGap = 1}) {
     const StyledTab = StyledTabs(Tab);
     const StyledTabPanel = StyledTabs(Tab.Panel);
+    const StyledTabList = StyledTabs(Tab.List);
 
     return (
         <>
             <GlobalStyles />
             <Tab.Group>
-            <Tab.List>
+            <StyledTabList tabGap={tabGap}>
                 {tabs.map(tab => {
                     return <StyledTab
                     tabSize={tabSize}
@@ -18,7 +19,7 @@ export default function Tabs({tabs, tabSize = 'medium',}) {
                         {tab.label}
                     </StyledTab>
                 })}
-            </Tab.List>
+            </StyledTabList>
             <Tab.Panels>
                 {tabs.map(tab => {
                     return <StyledTabPanel>

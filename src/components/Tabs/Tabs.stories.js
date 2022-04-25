@@ -14,5 +14,6 @@ Primary.args = {
         {label: 'x', content: 'x'},
         {label: 'y', content: 'y'}
     ],
-    tabSize: 'medium'
+    tabSize: 'medium',
+    tabGap: 1
 };
