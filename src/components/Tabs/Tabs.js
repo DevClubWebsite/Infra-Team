@@ -1,25 +1,33 @@
 import { Tab } from '@headlessui/react';
 import { StyledTabs } from './Tabs.styled';
+import GlobalStyles from "../../Theme/Global";
 
-export default function Tabs({tabs, tabSize = medium,}) {
+export default function Tabs({tabs, tabSize = 'medium',}) {
     const StyledTab = StyledTabs(Tab);
+    const StyledTabPanel = StyledTabs(Tab.Panel);
 
     return (
-        <Tab.Group>
-        <Tab.List>
-            {tabs.map(tab => {
-                return <StyledTab
-                tabSize={tabSize}
-                >
-                    {tab.label}
-                </StyledTab>
-            })}
-        </Tab.List>
-        <Tab.Panels>
-        <Tab.Panel>Content 1</Tab.Panel>
-        <Tab.Panel>Content 2</Tab.Panel>
-        <Tab.Panel>Content 3</Tab.Panel>
-        </Tab.Panels>
-    </Tab.Group>
+        <>
+            <GlobalStyles />
+            <Tab.Group>
+            <Tab.List>
+                {tabs.map(tab => {
+                    return <StyledTab
+                    tabSize={tabSize}
+                    >
+                        {tab.label}
+                    </StyledTab>
+                })}
+            </Tab.List>
+            <Tab.Panels>
+                {tabs.map(tab => {
+                    return <StyledTabPanel>
+                        {tab.content}
+                    </StyledTabPanel>
+                })}
+                <StyledTabPanel>Content 1</StyledTabPanel>
+            </Tab.Panels>
+        </Tab.Group>
+        </>
     )
 }
