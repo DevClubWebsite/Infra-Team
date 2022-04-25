@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 import { Tab } from '@headlessui/react';
 
+
 export const StyledTabs = (variant) => {
 
     if (variant === Tab.List) {
@@ -16,6 +17,7 @@ export const StyledTabs = (variant) => {
             border-radius: 0.555rem;
             width: 3.8rem;
             height: 1.9rem;
+            padding: 0.2rem;
             background-color: ;
             ${({tabSize}) => {
                 if (tabSize === 'medium') {
