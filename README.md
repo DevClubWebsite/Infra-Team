@@ -147,6 +147,7 @@ function foo() {
 | Theme.typography.yellow | #F6C927 |
 | Theme.typography.dark | #0A0A1B |
 | Theme.typography.darker | #0E0E28 |
+| Theme.border.blue | #1F1F53 |
 
 ##### Example:
 ```js
