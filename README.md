@@ -135,6 +135,32 @@ function foo() {
    );
 }
 ```
+### Tabs
+#### Attributes:
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| tabs | Array | - | - | True |
+| tabSize | String | "small", "medium", "large" | "medium" | False |
+| tabGap | Number | - | 1(rem) | False |
+| tabDirection | String | "row", "column" | "row" | False |
+
+##### Example:
+```js
+import { Tabs, ButtonCTA } from "@dev-club/ds";
+    
+function foo() {
+    const arr = [
+        {label: 'Tab 1', content: 'content 1'},
+        {label: 'Tab 2', content: <ButtonCTA label='Click Here!' />}
+    ]
+    return (
+        <Card width="12.222" height="14.222" color="#000000" border="#FFFFFF">
+            <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
+        </Card>
+   );
+}
+```
+
 ### Theme
 ##### Options:
 

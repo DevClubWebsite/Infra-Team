@@ -7,8 +7,9 @@ export const StyledTabs = (variant) => {
     if (variant === Tab.List) {
         return styled(variant)`
             display: flex;
+            justify-content: unset;
             flex-direction: ${({tabDirection}) => `${tabDirection};`}
-            gap: ${({tabGap}) => `${tabGap}rem;`}            
+            gap: ${({tabGap}) => `${tabGap}rem;`}       
         `
     };
 
@@ -35,8 +36,8 @@ export const StyledTabs = (variant) => {
     
     if (variant === Tab.Panel) {
         return styled(variant)`
-        color: blue;
-    `
+            color: blue;
+        `
     };
 };
 
@@ -54,5 +55,5 @@ export const StyledButton = styled.button`
             `
         }
     }}
-    border-radius: 0.555rem;
+    border-radius: 0.3rem;
 `

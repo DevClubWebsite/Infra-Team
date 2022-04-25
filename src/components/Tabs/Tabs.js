@@ -11,7 +11,7 @@ export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection
     const [selectedTab, setSelectedTab] = useState(0);
     const StyledTab = StyledTabs(Tab);
     const StyledTabPanel = StyledTabs(Tab.Panel);
-    const StyledTabList = StyledTabs(Tab.List);    
+    const StyledTabList = StyledTabs(Tab.List);
 
     useEffect(() => {
         if (tabSize === 'small') {
@@ -60,5 +60,5 @@ Tabs.propTypes = {
     tabs: PropTypes.array.isRequired,
     tabSize: PropTypes.oneOf(['small', 'medium', 'large']),
     tabGap: PropTypes.number,
-    tabDirection: PropTypes.oneOf(['row', 'column'])
+    tabDirection: PropTypes.oneOf(['row', 'column']),
 }
