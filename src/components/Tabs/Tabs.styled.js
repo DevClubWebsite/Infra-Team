@@ -21,45 +21,25 @@ export const StyledTabs = (variant) => {
 
     if (variant === Tab) {
         return styled(variant)`
-            width: 3.8rem;
-            height: 1.9rem;
+            width: ${({width}) => width}rem;
+            height: ${({height}) => height}rem;
+            padding: 0.2rem;
             background: none;
-            ${({tabSize}) => {
-                if (tabSize === 'medium') {
-                    return css`
-                        width: 9.8rem;
-                        height: 4.55rem;
-                    ` 
-                } else if (tabSize === 'large') {
-                    return css`
-                        width: 25.3rem;
-                        height: 11.05rem;
-                    `
-                };
-            }}
+            background-color: ${({background}) => background};
+            border: 1px solid ${({border}) => border};
+            border-radius: 0.277rem;
+
+            &div {
+                width: 100%;
+                height: 100%;
+                border: 10px solid blue
+            }
         `
     };
     
     if (variant === Tab.Panel) {
         return styled(variant)`
-        padding-top: 1rem;
+            padding-top: 1rem;
         `
     };
 };
-
-export const StyledButton = styled.button`
-    width: 100%;
-    height: 100%;
-    padding: 0.2rem;
-    background-color: ${Theme.background.light};
-    border: 1px solid ${Theme.border.blue};
-    ${({index, selectedTab}) => {
-        if (index === selectedTab) {
-            return css`
-                background-color: ${Theme.background.yellow};
-                border: none;
-            `
-        };
-    }}
-    border-radius: 0.3rem;
-`
