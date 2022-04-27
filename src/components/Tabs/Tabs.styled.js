@@ -28,6 +28,14 @@ export const StyledTabs = (variant) => {
             background-color: ${({background}) => background};
             border: 1px solid ${({border}) => border};
             border-radius: 0.277rem;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
         `
     };
     
