@@ -143,6 +143,7 @@ function foo() {
 | tabSize | String | "small", "medium", "large" | "medium" | False |
 | tabGap | Number | - | 1(rem) | False |
 | tabDirection | String | "row", "column" | "row" | False |
+| spaceBetween | Boolean | true, false | true | False |
 
 ##### Example:
 ```js
@@ -154,9 +155,7 @@ function foo() {
         {label: 'Tab 2', content: <ButtonCTA label='Click Here!' />}
     ]
     return (
-        <Card width="12.222" height="14.222" color="#000000" border="#FFFFFF">
-            <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
-        </Card>
+        <Card tabs={arr} spaceBetween={false} tabGap={1.5} />
    );
 }
 ```
