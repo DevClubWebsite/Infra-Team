@@ -1,64 +1,77 @@
 import { Tab } from '@headlessui/react';
-import { StyledButton, StyledTabs } from './Tabs.styled';
+import { StyledTabs } from './Tabs.styled';
 import GlobalStyles from "../../Theme/Global";
 import PropTypes from "prop-types";
 import Typography from '../Typography/Typography';
 import Theme from '../../Theme/Theme';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection = 'row'}) {
-    const [fontSize, setFontSize] = useState(1);
+export default function Tabs({
+    tabs,
+    gap = 1,
+    direction = 'row',
+    space = true,
+    width,
+    height,
+    selectedbackground = Theme.background.yellow,
+    background = Theme.background.light,
+    border = 'none',
+    selectedcolor = Theme.typography.darker,
+    color = Theme.typography.white,
+    fontsize = 1})
+    {
+
     const [selectedTab, setSelectedTab] = useState(0);
     const StyledTab = StyledTabs(Tab);
     const StyledTabPanel = StyledTabs(Tab.Panel);
     const StyledTabList = StyledTabs(Tab.List);
-
-    useEffect(() => {
-        if (tabSize === 'small') {
-            setFontSize(0.7);
-        } else if (tabSize === 'medium') {
-            setFontSize(1);
-        } else if (tabSize === 'large') {
-            setFontSize(2);
-        };
-    }, [tabSize]);
-
-    const changeSelectedTab = (index) => {
-        setSelectedTab(index);
-    };
 
     return (
         <>
             <GlobalStyles />
             <Tab.Group>
             <StyledTabList
-            tabGap={tabGap}
-            tabDirection={tabDirection}
+            gap={gap}
+            direction={direction}
+            space={space}
             >
                 {tabs.map((tab, index) => {
-                    return <StyledTab tabSize={tabSize}>
-                        <StyledButton index={index} onClick={() => changeSelectedTab(index)} selectedTab={selectedTab}>
-                            <Typography label={tab.label} color={Theme.typography.white} variant='p' size={fontSize} />
-                        </StyledButton>
+                    return <StyledTab
+                    key={index}
+                    height={height}
+                    width={width}
+                    background={index === selectedTab ? selectedbackground : background}
+                    border={border}
+                    color={color}
+                    selectedbackground={selectedbackground}
+                    >
+                        <Typography label={tab.label} color={index === selectedTab ? selectedcolor : color} variant='p' size={fontsize}/>
                     </StyledTab>
                 })}
             </StyledTabList>
             <Tab.Panels>
-                {tabs.map(tab => {
-                    return <StyledTabPanel>
-                        {tab.content}
+                {tabs.map((tab, index) => {
+                    return <StyledTabPanel key={index}>
+                            {tab.content}
                     </StyledTabPanel>
                 })}
-                <StyledTabPanel>Content 1</StyledTabPanel>
             </Tab.Panels>
         </Tab.Group>
         </>
     )
-}
+};
 
 Tabs.propTypes = {
     tabs: PropTypes.array.isRequired,
-    tabSize: PropTypes.oneOf(['small', 'medium', 'large']),
-    tabGap: PropTypes.number,
-    tabDirection: PropTypes.oneOf(['row', 'column']),
-}
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    background: PropTypes.string,
+    selectedbackground: PropTypes.string,
+    border: PropTypes.string,
+    color: PropTypes.string,
+    selectedcolor: PropTypes.string,
+    gap: PropTypes.number,
+    direction: PropTypes.oneOf(['row', 'column']),
+    space: PropTypes.bool,
+    fontsize: PropTypes.number
+};
