@@ -37,7 +37,7 @@ export default function Tabs({
             <StyledTabList
             gap={gap}
             direction={direction}
-            space={space}
+            space={`${space}`}
             >
                 {tabs.map((tab, index) => {
                     return <StyledTab
