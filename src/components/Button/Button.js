@@ -3,34 +3,21 @@ import PropTypes from "prop-types";
 import { StyledButton } from "./Button.styled";
 import GlobalStyles from "../../Theme/Global";
 import Theme from "../../Theme/Theme";
-
-function Button({
-  background = Theme.background.dark,
-  color = Theme.typography.white,
-  label,
-  variant = "regular",
-  size = "medium",
-}) {
+import Typography from "../Typography/Typography";
+export default function Button({ background = Theme.background.dark, color = "none", variant = "regular", width, height, padding = 0.2 }) {
   return (
     <>
       <GlobalStyles />
-      <StyledButton
-        size={size}
-        variant={variant}
-        background={background}
-        color={color}
-      >
-        {label}
-      </StyledButton>
+      <StyledButton background={background} color={color} variant={variant} width={width} height={height} padding={padding} />
     </>
   );
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
   background: PropTypes.string,
   color: PropTypes.string,
   variant: PropTypes.oneOf(["regular", "outlined", "text"]),
-  size: PropTypes.oneOf(["small", "medium", "large", "extraLarge"]),
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  padding: PropTypes.number
 };
-export default Button;
