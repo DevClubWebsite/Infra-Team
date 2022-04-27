@@ -140,10 +140,17 @@ function foo() {
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
 | tabs | Array | - | - | True |
-| tabSize | String | "small", "medium", "large" | "medium" | False |
+| width | String | - | - | True |
+| height | String | - | - | True |
+| background | String | - | Theme.background.light | False |
+| selectedbackground | String | - | Theme.background.yellow | False |
+| border | String | - | "none" | False |
+| color (font) | String | - | Theme.typography.white | False |
+| selectedcolor (font) | String | - | Theme.typograpghy.dark | False | 
 | gap | Number | - | 1(rem) | False |
 | direction | String | "row", "column" | "row" | False |
 | space | Boolean | true, false | true | False |
+| fontsize | Number | - | 1 (rem) | False |
 
 ##### Example:
 ```js
@@ -155,7 +162,7 @@ function foo() {
         {label: 'Tab 2', content: <ButtonCTA label='Click Here!' />}
     ]
     return (
-        <Card tabs={arr} space={false} gap={1.5} />
+        <Tabs tabs={arr} width={10} height={6} />
    );
 }
 ```
