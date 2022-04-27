@@ -26,6 +26,10 @@ export default function Tabs({
     const StyledTabPanel = StyledTabs(Tab.Panel);
     const StyledTabList = StyledTabs(Tab.List);
 
+    const changeSelectedTab = (index) => {
+        setSelectedTab(index);
+    };
+
     return (
         <>
             <GlobalStyles />
@@ -33,7 +37,7 @@ export default function Tabs({
             <StyledTabList
             gap={gap}
             direction={direction}
-            space={space}
+            space={`${space}`}
             >
                 {tabs.map((tab, index) => {
                     return <StyledTab
@@ -45,7 +49,9 @@ export default function Tabs({
                     color={color}
                     selectedbackground={selectedbackground}
                     >
-                        <Typography label={tab.label} color={index === selectedTab ? selectedcolor : color} variant='p' size={fontsize}/>
+                        <div onClick={() => changeSelectedTab(index)}>
+                            <Typography label={tab.label} color={index === selectedTab ? selectedcolor : color} variant='p' size={fontsize}/>
+                        </div>
                     </StyledTab>
                 })}
             </StyledTabList>

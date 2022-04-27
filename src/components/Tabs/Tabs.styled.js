@@ -8,7 +8,7 @@ export const StyledTabs = (variant) => {
         return styled(variant)`
             display: flex;
             ${({space}) => {
-                if (space) {
+                if (space === "true") {
                     return css`
                         justify-content: space-between;
                     `
@@ -28,6 +28,14 @@ export const StyledTabs = (variant) => {
             background-color: ${({background}) => background};
             border: 1px solid ${({border}) => border};
             border-radius: 0.277rem;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
         `
     };
     
