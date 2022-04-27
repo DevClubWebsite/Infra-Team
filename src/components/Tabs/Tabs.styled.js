@@ -8,7 +8,7 @@ export const StyledTabs = (variant) => {
         return styled(variant)`
             display: flex;
             ${({space}) => {
-                if (space) {
+                if (space === "true") {
                     return css`
                         justify-content: space-between;
                     `
