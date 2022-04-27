@@ -12,11 +12,7 @@ export const StyledTabs = (variant) => {
                     return css`
                         justify-content: space-between;
                     `
-                } else {
-                    return css`
-                        justify-content: unset;
-                    `
-                }
+                };
             }}
             flex-direction: ${({tabDirection}) => `${tabDirection};`}
             gap: ${({tabGap}) => `${tabGap}rem;`}    
@@ -46,7 +42,7 @@ export const StyledTabs = (variant) => {
     
     if (variant === Tab.Panel) {
         return styled(variant)`
-            color: blue;
+        padding-top: 1rem;
         `
     };
 };
