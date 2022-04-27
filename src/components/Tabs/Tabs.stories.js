@@ -18,5 +18,5 @@ Primary.args = {
     tabSize: 'medium',
     tabGap: 1,
     tabDirection: 'row',
-    spaceBetween: false
+    spaceBetween: true
 };

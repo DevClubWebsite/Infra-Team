@@ -7,9 +7,19 @@ export const StyledTabs = (variant) => {
     if (variant === Tab.List) {
         return styled(variant)`
             display: flex;
-            justify-content: unset;
+            ${({spaceBetween}) => {
+                if (spaceBetween) {
+                    return css`
+                        justify-content: space-between;
+                    `
+                } else {
+                    return css`
+                        justify-content: unset;
+                    `
+                }
+            }}
             flex-direction: ${({tabDirection}) => `${tabDirection};`}
-            gap: ${({tabGap}) => `${tabGap}rem;`}       
+            gap: ${({tabGap}) => `${tabGap}rem;`}    
         `
     };
 
@@ -29,7 +39,7 @@ export const StyledTabs = (variant) => {
                         width: 25.3rem;
                         height: 11.05rem;
                     `
-                }
+                };
             }}
         `
     };
@@ -53,7 +63,7 @@ export const StyledButton = styled.button`
                 background-color: ${Theme.background.yellow};
                 border: none;
             `
-        }
+        };
     }}
     border-radius: 0.3rem;
 `

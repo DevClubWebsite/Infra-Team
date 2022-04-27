@@ -6,7 +6,7 @@ import Typography from '../Typography/Typography';
 import Theme from '../../Theme/Theme';
 import React, { useState, useEffect } from 'react';
 
-export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection = 'row'}) {
+export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection = 'row', spaceBetween = true}) {
     const [fontSize, setFontSize] = useState(1);
     const [selectedTab, setSelectedTab] = useState(0);
     const StyledTab = StyledTabs(Tab);
@@ -34,6 +34,7 @@ export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection
             <StyledTabList
             tabGap={tabGap}
             tabDirection={tabDirection}
+            spaceBetween={spaceBetween}
             >
                 {tabs.map((tab, index) => {
                     return <StyledTab tabSize={tabSize}>
@@ -61,4 +62,5 @@ Tabs.propTypes = {
     tabSize: PropTypes.oneOf(['small', 'medium', 'large']),
     tabGap: PropTypes.number,
     tabDirection: PropTypes.oneOf(['row', 'column']),
+    spaceBetween: PropTypes.bool
 }
