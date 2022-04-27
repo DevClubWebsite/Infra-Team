@@ -1,3 +1,4 @@
+import Theme from "../../Theme/Theme";
 import Tabs from "./Tabs";
 
 export default {
@@ -19,5 +20,10 @@ Primary.args = {
     height: 6,
     gap: 1,
     direction: 'row',
-    space: true
+    space: true,
+    background: Theme.background.light,
+    selectedbackground: Theme.background.yellow,
+    border: 'none',
+    selectedcolor: Theme.typography.darker,
+    color: Theme.typography.white
 };

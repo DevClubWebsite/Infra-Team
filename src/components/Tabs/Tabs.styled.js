@@ -21,19 +21,13 @@ export const StyledTabs = (variant) => {
 
     if (variant === Tab) {
         return styled(variant)`
-            width: ${({width}) => width}rem;
-            height: ${({height}) => height}rem;
+            min-width: ${({width}) => width}rem;
+            min-height: ${({height}) => height}rem;
             padding: 0.2rem;
             background: none;
             background-color: ${({background}) => background};
             border: 1px solid ${({border}) => border};
             border-radius: 0.277rem;
-
-            &div {
-                width: 100%;
-                height: 100%;
-                border: 10px solid blue
-            }
         `
     };
     

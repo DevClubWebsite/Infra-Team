@@ -5,10 +5,9 @@ import PropTypes from "prop-types";
 import Typography from '../Typography/Typography';
 import Theme from '../../Theme/Theme';
 import React, { useState } from 'react';
-import Button from '../Button/Button';
 
-export default function Tabs(
-    {tabs,
+export default function Tabs({
+    tabs,
     gap = 1,
     direction = 'row',
     space = true,
@@ -17,18 +16,15 @@ export default function Tabs(
     selectedbackground = Theme.background.yellow,
     background = Theme.background.light,
     border = 'none',
-    color = Theme.typography.white}
-    ){
+    selectedcolor = Theme.typography.darker,
+    color = Theme.typography.white,
+    fontsize = 1})
+    {
 
-    const [fontSize, setFontSize] = useState(1);
     const [selectedTab, setSelectedTab] = useState(0);
     const StyledTab = StyledTabs(Tab);
     const StyledTabPanel = StyledTabs(Tab.Panel);
     const StyledTabList = StyledTabs(Tab.List);
-
-    const changeSelectedTab = (index) => {
-        setSelectedTab(index);
-    };
 
     return (
         <>
@@ -49,7 +45,7 @@ export default function Tabs(
                     color={color}
                     selectedbackground={selectedbackground}
                     >
-                        <Typography label={tab.label} color={color} variant='p' size={fontSize}/>
+                        <Typography label={tab.label} color={index === selectedTab ? selectedcolor : color} variant='p' size={fontsize}/>
                     </StyledTab>
                 })}
             </StyledTabList>
@@ -73,7 +69,9 @@ Tabs.propTypes = {
     selectedbackground: PropTypes.string,
     border: PropTypes.string,
     color: PropTypes.string,
+    selectedcolor: PropTypes.string,
     gap: PropTypes.number,
     direction: PropTypes.oneOf(['row', 'column']),
-    space: PropTypes.bool
+    space: PropTypes.bool,
+    fontsize: PropTypes.number
 };
