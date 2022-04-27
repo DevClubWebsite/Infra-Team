@@ -141,9 +141,9 @@ function foo() {
 | --------- | ---- | ------- | ---- | -------- |
 | tabs | Array | - | - | True |
 | tabSize | String | "small", "medium", "large" | "medium" | False |
-| tabGap | Number | - | 1(rem) | False |
-| tabDirection | String | "row", "column" | "row" | False |
-| spaceBetween | Boolean | true, false | true | False |
+| gap | Number | - | 1(rem) | False |
+| direction | String | "row", "column" | "row" | False |
+| space | Boolean | true, false | true | False |
 
 ##### Example:
 ```js
@@ -155,7 +155,7 @@ function foo() {
         {label: 'Tab 2', content: <ButtonCTA label='Click Here!' />}
     ]
     return (
-        <Card tabs={arr} spaceBetween={false} tabGap={1.5} />
+        <Card tabs={arr} space={false} gap={1.5} />
    );
 }
 ```

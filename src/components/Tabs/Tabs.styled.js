@@ -7,15 +7,15 @@ export const StyledTabs = (variant) => {
     if (variant === Tab.List) {
         return styled(variant)`
             display: flex;
-            ${({spaceBetween}) => {
-                if (spaceBetween) {
+            ${({space}) => {
+                if (space) {
                     return css`
                         justify-content: space-between;
                     `
                 };
             }}
-            flex-direction: ${({tabDirection}) => `${tabDirection};`}
-            gap: ${({tabGap}) => `${tabGap}rem;`}    
+            flex-direction: ${({direction}) => `${direction};`}
+            gap: ${({gap}) => `${gap}rem;`}    
         `
     };
 

@@ -6,7 +6,7 @@ import Typography from '../Typography/Typography';
 import Theme from '../../Theme/Theme';
 import React, { useState, useEffect } from 'react';
 
-export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection = 'row', spaceBetween = true}) {
+export default function Tabs({tabs, tabSize = 'medium', gap = 1, direction = 'row', space = true}) {
     const [fontSize, setFontSize] = useState(1);
     const [selectedTab, setSelectedTab] = useState(0);
     const StyledTab = StyledTabs(Tab);
@@ -32,12 +32,12 @@ export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection
             <GlobalStyles />
             <Tab.Group>
             <StyledTabList
-            tabGap={tabGap}
-            tabDirection={tabDirection}
-            spaceBetween={spaceBetween}
+            gap={gap}
+            direction={direction}
+            space={space}
             >
                 {tabs.map((tab, index) => {
-                    return <StyledTab tabSize={tabSize}>
+                    return <StyledTab tabSize={tabSize} key={index}>
                         <StyledButton index={index} onClick={() => changeSelectedTab(index)} selectedTab={selectedTab}>
                             <Typography label={tab.label} color={Theme.typography.white} variant='p' size={fontSize} />
                         </StyledButton>
@@ -45,8 +45,8 @@ export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection
                 })}
             </StyledTabList>
             <Tab.Panels>
-                {tabs.map(tab => {
-                    return <StyledTabPanel>
+                {tabs.map((tab, index) => {
+                    return <StyledTabPanel key={index}>
                         {tab.content}
                     </StyledTabPanel>
                 })}
@@ -60,7 +60,7 @@ export default function Tabs({tabs, tabSize = 'medium', tabGap = 1, tabDirection
 Tabs.propTypes = {
     tabs: PropTypes.array.isRequired,
     tabSize: PropTypes.oneOf(['small', 'medium', 'large']),
-    tabGap: PropTypes.number,
-    tabDirection: PropTypes.oneOf(['row', 'column']),
-    spaceBetween: PropTypes.bool
+    gap: PropTypes.number,
+    direction: PropTypes.oneOf(['row', 'column']),
+    space: PropTypes.bool
 }

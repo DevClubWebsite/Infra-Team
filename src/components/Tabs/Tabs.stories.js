@@ -16,7 +16,7 @@ Primary.args = {
         {label: 'Tab 3', content: 'Content 3'}
     ],
     tabSize: 'medium',
-    tabGap: 1,
-    tabDirection: 'row',
-    spaceBetween: true
+    gap: 1,
+    direction: 'row',
+    space: true
 };
