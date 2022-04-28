@@ -5,6 +5,7 @@
   "main": "dist/bundle.js",
   "private": false,
   "dependencies": {
+    "@headlessui/react": "^1.6.0",
     "@rollup/plugin-commonjs": "^21.1.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
