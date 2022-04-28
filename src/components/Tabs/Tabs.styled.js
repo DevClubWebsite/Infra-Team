@@ -1,6 +1,5 @@
 import styled, {css} from 'styled-components';
 import { Tab } from '@headlessui/react';
-import Theme from '../../Theme/Theme';
 
 export const StyledTabs = (variant) => {
 
