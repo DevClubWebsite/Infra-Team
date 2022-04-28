@@ -1,13 +1,13 @@
 import React from "react";
-import DropdownList from "./DropdownList";
+import DropMenu from "./DropMenu";
 export default {
-  title: "Button/Dropdown List",
-  component: DropdownList,
+  title: "Button/Menu",
+  component: DropMenu,
 };
 
-const Template = (args) => <DropdownList {...args} />;
-export const DDL = Template.bind({});
-DDL.args = {
+const Template = (args) => <DropMenu {...args} />;
+export const Primary = Template.bind({});
+Primary.args = {
   title: "Title",
   items: [
     {

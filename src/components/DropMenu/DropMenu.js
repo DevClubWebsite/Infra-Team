@@ -2,15 +2,15 @@ import React from "react";
 import { Menu } from "@headlessui/react";
 import PropTypes from "prop-types";
 import Global from "../../Theme/Global";
-import { StyledDDLButton, StyledItem } from "./DropdownList.styled";
+import { StyledMenuButton, StyledItem } from "./DropMenu.styled";
 import Typography from "../Typography/Typography";
 
-function DropdownList({ title, items, width = 15, height = 3 }) {
+function DropMenu({ title, items, width = 15, height = 3 }) {
   return (
     <>
       <Global />
       <Menu>
-        <Menu.Button as={StyledDDLButton} width={width} height={height}>
+        <Menu.Button as={StyledMenuButton} width={width} height={height}>
           {title}
         </Menu.Button>
         <Menu.Items>
@@ -37,11 +37,11 @@ function DropdownList({ title, items, width = 15, height = 3 }) {
     </>
   );
 }
-DropdownList.propTypes = {
+DropMenu.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
 };
 
-export default DropdownList;
+export default DropMenu;

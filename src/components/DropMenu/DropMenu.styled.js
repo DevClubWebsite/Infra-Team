@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Theme from "../../Theme/Theme";
 
-export const StyledDDLButton = styled.button`
+export const StyledMenuButton = styled.button`
   text-align: left;
   border-radius: 5px;
   background: #121231;
