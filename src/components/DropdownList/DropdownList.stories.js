@@ -9,5 +9,20 @@ const Template = (args) => <DropdownList {...args} />;
 export const DDL = Template.bind({});
 DDL.args = {
   title: "Title",
-  items: ["Item 1", "Item 2", "Item 3"],
+  items: [
+    {
+      label: "Item 1",
+      variant: "p",
+      color: "white",
+      weight: 400,
+    },
+    {
+      label: "Item 2",
+      variant: "p",
+      color: "yellow",
+      weight: 400,
+    },
+  ],
+  width: 15,
+  height: 3,
 };

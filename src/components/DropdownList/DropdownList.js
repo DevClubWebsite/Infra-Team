@@ -3,8 +3,9 @@ import { Menu } from "@headlessui/react";
 import PropTypes from "prop-types";
 import Global from "../../Theme/Global";
 import { StyledDDLButton, StyledItem } from "./DropdownList.styled";
+import Typography from "../Typography/Typography";
 
-function DropdownList({ title, items, width = 20, height = 4 }) {
+function DropdownList({ title, items, width = 15, height = 3 }) {
   return (
     <>
       <Global />
@@ -21,7 +22,13 @@ function DropdownList({ title, items, width = 20, height = 4 }) {
                 width={width}
                 height={height}
               >
-                {<p>{item}</p>}
+                {
+                  <Typography
+                    color={item.color}
+                    variant={item.variant}
+                    label={item.label}
+                  />
+                }
               </Menu.Item>
             );
           })}
@@ -33,8 +40,8 @@ function DropdownList({ title, items, width = 20, height = 4 }) {
 DropdownList.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
-  width: PropTypes.string,
-  height: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export default DropdownList;
