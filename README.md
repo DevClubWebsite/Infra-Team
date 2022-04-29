@@ -78,6 +78,7 @@ function foo() {
 | variant | String | "p", "h1"-"h6" | - | True |
 | color | String | - | - | True |
 | weight | Number | - | - | False |
+| size | Number | - | - | False |
 
 ##### Example:
 ```js
@@ -134,6 +135,38 @@ function foo() {
    );
 }
 ```
+### Tabs
+#### Attributes:
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| tabs | Array | - | - | True |
+| width | String | - | - | True |
+| height | String | - | - | True |
+| background | String | - | Theme.background.light | False |
+| selectedbackground | String | - | Theme.background.yellow | False |
+| border | String | - | "none" | False |
+| color (font) | String | - | Theme.typography.white | False |
+| selectedcolor (font) | String | - | Theme.typograpghy.dark | False | 
+| gap | Number | - | 1(rem) | False |
+| direction | String | "row", "column" | "row" | False |
+| space | Boolean | true, false | true | False |
+| fontsize | Number | - | 1 (rem) | False |
+
+##### Example:
+```js
+import { Tabs, ButtonCTA } from "@dev-club/ds";
+    
+function foo() {
+    const arr = [
+        {label: 'Tab 1', content: 'content 1'},
+        {label: 'Tab 2', content: <ButtonCTA label='Click Here!' />}
+    ]
+    return (
+        <Tabs tabs={arr} width={10} height={6} />
+   );
+}
+```
+
 ### Theme
 ##### Options:
 
@@ -146,6 +179,7 @@ function foo() {
 | Theme.typography.yellow | #F6C927 |
 | Theme.typography.dark | #0A0A1B |
 | Theme.typography.darker | #0E0E28 |
+| Theme.border.blue | #1F1F53 |
 
 ##### Example:
 ```js

@@ -7,28 +7,37 @@ export default {
   component: Button,
 };
 
+
+// background: PropTypes.string,
+//   color: PropTypes.string,
+//   variant: PropTypes.oneOf(["regular", "outlined", "text"]),
+//   width: PropTypes.number.isRequired,
+//   height: PropTypes.number.isRequired
 const Template = (args) => <Button {...args} />;
 export const Regular = Template.bind({});
 Regular.args = {
   variant: "regular",
-  background: "whitesmoke",
+  background: Theme.background.yellow,
   color: "black",
-  label: "click me!",
-  size: "medium",
+  width: 10,
+  height: 3,
+  padding: 0.2
 };
 export const Outlined = Template.bind({});
 Outlined.args = {
   variant: "outlined",
   background: "none",
   color: Theme.background.yellow,
-  label: "click me!",
-  size: "medium",
+  width: 10,
+  height: 3,
+  padding: 0.2
 };
 export const Text = Template.bind({});
 Text.args = {
   variant: "text",
   background: "none",
   color: Theme.background.yellow,
-  label: "click me!",
-  size: "medium",
+  width: 10,
+  height: 3,
+  padding: 0.2
 };
