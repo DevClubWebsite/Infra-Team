@@ -8,14 +8,14 @@ import Theme from '../../Theme/Theme';
 export default function DialogComponent({ opendialogbackground, opendialogtextcolor = Theme.typography.white, opendialogwidth = 5, opendialogheight = 5, titlelabel = "Accept all Cookies", opendialoglabel = "Manage Cookies", titlecolor = "blue" }) {
     const [isOpen, setIsOpen] = useState(true);
     const StyledTitle = StyledDialog(Dialog.Title);
+    const StyledOverlay = StyledDialog(Dialog.Overlay);
     const setOpen = () => { setIsOpen(true); }
     return (
         <>
-            <Button Component={<Typography label="Hello World" variant="p" color="red" />} background={Theme.background.light} width={opendialogwidth} height={opendialogheight} onclick={setOpen}>
+            <Button padding={5} Component={<Typography label="Manage Cookies" variant="p" color="red" />} background={Theme.background.light} width={opendialogwidth} height={opendialogheight} onclick={setOpen}>
             </Button>
             <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-                <Dialog.Overlay />
-
+                {/* <Dialog.Overlay /> */}
                 <StyledTitle titlecolor={titlecolor}>{titlelabel}</StyledTitle>
                 <Dialog.Description>
                     This will permanently deactivate your account

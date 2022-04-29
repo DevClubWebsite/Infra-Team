@@ -14,8 +14,7 @@ export const StyledDialog = (variant) => {
     if (variant === Dialog.Title) {
         return styled(variant)`
             color: ${({ titlecolor }) => titlecolor};
-        
-        
+                   
         `;
     }
 }

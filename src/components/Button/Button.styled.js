@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledButton = styled.button`
-  padding: 0.2rem;
+  padding: ${({ padding }) => padding}rem;
   min-width: ${({ width }) => width}rem;
   min-height: ${({ height }) => height}rem;
   border-radius: 0.277rem;
