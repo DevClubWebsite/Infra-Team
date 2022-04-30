@@ -1,27 +1,29 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
+import { StyledRadioGroup } from './RadioOptions.styled';
 
 export default function RadioOptions() {
-  let [plan, setPlan] = useState('startup')
+  const [option, setOption] = useState('startup')
+  
+  const StyledRadioGroupOption = StyledRadioGroup(RadioGroup.Option);
 
   return (
-    <RadioGroup value={plan} onChange={setPlan}>
-      <RadioGroup.Label>Plan</RadioGroup.Label>
-      <RadioGroup.Option value="startup">
+    <RadioGroup value={option} onChange={setOption}>
+      <StyledRadioGroupOption value="startup">
         {({ checked }) => (
           <span className={checked ? 'bg-blue-200' : ''}>Startup</span>
         )}
-      </RadioGroup.Option>
-      <RadioGroup.Option value="business">
+      </StyledRadioGroupOption>
+      <StyledRadioGroupOption value="business">
         {({ checked }) => (
           <span className={checked ? 'bg-blue-200' : ''}>Business</span>
         )}
-      </RadioGroup.Option>
-      <RadioGroup.Option value="enterprise">
+      </StyledRadioGroupOption>
+      <StyledRadioGroupOption value="enterprise">
         {({ checked }) => (
           <span className={checked ? 'bg-blue-200' : ''}>Enterprise</span>
         )}
-      </RadioGroup.Option>
+      </StyledRadioGroupOption>
     </RadioGroup>
   )
 }
