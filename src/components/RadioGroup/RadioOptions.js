@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
 
-export default function RadioGroup() {
+export default function RadioOptions() {
   let [plan, setPlan] = useState('startup')
 
   return (
