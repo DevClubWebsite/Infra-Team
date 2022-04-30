@@ -5,21 +5,22 @@ import { StyledDialog } from './Dialog.styled';
 import Button from "../Button/Button";
 import Theme from '../../Theme/Theme';
 
-export default function DialogComponent({ opendialogbackground, opendialogtextcolor = Theme.typography.white, opendialogwidth = 5, opendialogheight = 5, titlelabel = "Accept all Cookies", opendialoglabel = "Manage Cookies", titlecolor = "blue" }) {
+export default function DialogComponent({ descriptioncolor = Theme.typography.white, dialogwidth = 30, dialogheight = 15, opendialogbackground = Theme.background.light, opendialogtextcolor = Theme.typography.white, opendialogwidth = 5, opendialogheight = 5, titlelabel = "Accept all Cookies", opendialoglabel = "Manage Cookies", titlecolor = "blue" }) {
     const [isOpen, setIsOpen] = useState(true);
+    const StyledDialogContainer = StyledDialog(Dialog);
     const StyledTitle = StyledDialog(Dialog.Title);
-    const StyledOverlay = StyledDialog(Dialog.Overlay);
-    const setOpen = () => { setIsOpen(true); }
+    const StyledDescription = StyledDialog(Dialog.Description);
+
     return (
         <>
-            <Button padding={5} Component={<Typography label="Manage Cookies" variant="p" color="red" />} background={Theme.background.light} width={opendialogwidth} height={opendialogheight} onclick={setOpen}>
+            <Button padding={1} Component={<Typography label={opendialoglabel} variant="p" color={opendialogtextcolor} />} background={opendialogbackground} width={opendialogwidth} height={opendialogheight} onclick={() => setIsOpen(!isOpen)}>
             </Button>
-            <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+            <StyledDialogContainer dialogwidth={dialogwidth} dialogheight={dialogheight} open={isOpen} onClose={() => setIsOpen(false)}>
                 {/* <Dialog.Overlay /> */}
                 <StyledTitle titlecolor={titlecolor}>{titlelabel}</StyledTitle>
-                <Dialog.Description>
+                <StyledDescription descriptioncolor={descriptioncolor}>
                     This will permanently deactivate your account
-                </Dialog.Description>
+                </StyledDescription>
 
                 <p>
                     Are you sure you want to deactivate your account? All of your data will
@@ -28,7 +29,7 @@ export default function DialogComponent({ opendialogbackground, opendialogtextco
 
                 <button onClick={() => setIsOpen(false)}>Deactivate</button>
                 <button onClick={() => setIsOpen(false)}>Cancel</button>
-            </Dialog>
+            </StyledDialogContainer>
         </>
     );
 }
