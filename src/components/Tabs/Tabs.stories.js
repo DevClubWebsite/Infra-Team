@@ -9,7 +9,7 @@ export default {
 const Template = args => <Tabs {...args} />
 
 export const Primary = Template.bind({});
-Primary.storyName = 'Tabs - not ready';
+Primary.storyName = 'Tabs';
 Primary.args = {
     tabs: [
         {label: 'Tab 1', content: 'Content 1'},
