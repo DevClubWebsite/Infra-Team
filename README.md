@@ -171,17 +171,17 @@ function foo() {
 
 ### Theme
 ##### Options:
-
-| Option | hex |
-| ------ | --- |
-| Theme.background.dark | #040413 |
-| Theme.background.light | #0A0A1B |
-| Theme.background.yellow | #F6C927 |
-| Theme.typography.white | #FFFFFF | 
-| Theme.typography.yellow | #F6C927 |
-| Theme.typography.dark | #0A0A1B |
-| Theme.typography.darker | #0E0E28 |
-| Theme.border.blue | #1F1F53 |
+###### Background
+- ![#040413](https://via.placeholder.com/15/040413/000000?text=+) `Theme.background.dark - #040413`
+- ![#0A0A1B](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.background.light - #0A0A1B`
+- ![#F6C927](https://via.placeholder.com/15/F6C927/000000?text=+) `Theme.background.yellow - #F6C927`
+###### Typography
+- ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `Theme.typography.white - #FFFFFF`
+- ![#F6C927](https://via.placeholder.com/15/F6C927/000000?text=+) `Theme.typography.yellow - #F6C927`
+- ![#0A0A1B](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.typography.dark - #0A0A1B`
+- ![#0E0E28](https://via.placeholder.com/15/0E0E28/000000?text=+) `Theme.typography.darker - #0E0E28`
+###### Border
+- ![#1F1F53](https://via.placeholder.com/15/1F1F53/000000?text=+) `Theme.border.blue - #1F1F53`
 
 ##### Example:
 ```js
