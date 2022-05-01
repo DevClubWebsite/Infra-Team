@@ -1,5 +1,5 @@
 import { Tab } from '@headlessui/react';
-import { StyledTabs } from './Tabs.styled';
+import { StyledTab, StyledTabPanel, StyledTabList } from './Tabs.styled';
 import GlobalStyles from "../../Theme/Global";
 import PropTypes from "prop-types";
 import Typography from '../Typography/Typography';
@@ -22,9 +22,6 @@ export default function Tabs({
     {
 
     const [selectedTab, setSelectedTab] = useState(0);
-    const StyledTab = StyledTabs(Tab);
-    const StyledTabPanel = StyledTabs(Tab.Panel);
-    const StyledTabList = StyledTabs(Tab.List);
 
     const changeSelectedTab = (index) => {
         setSelectedTab(index);
@@ -34,13 +31,13 @@ export default function Tabs({
         <>
             <GlobalStyles />
             <Tab.Group>
-            <StyledTabList
+            <Tab.List as={StyledTabList}
             gap={gap}
             direction={direction}
             space={`${space}`}
             >
                 {tabs.map((tab, index) => {
-                    return <StyledTab
+                    return <Tab as={StyledTab}
                     key={index}
                     height={height}
                     width={width}
@@ -50,16 +47,18 @@ export default function Tabs({
                     selectedbackground={selectedbackground}
                     >
                         <div onClick={() => changeSelectedTab(index)}>
-                            <Typography label={tab.label} color={index === selectedTab ? selectedcolor : color} variant='p' size={fontsize}/>
+                            <Typography color={index === selectedTab ? selectedcolor : color} as='p' size={fontsize}>
+                                {tab.label}
+                            </Typography>
                         </div>
-                    </StyledTab>
+                    </Tab>
                 })}
-            </StyledTabList>
+            </Tab.List>
             <Tab.Panels>
                 {tabs.map((tab, index) => {
-                    return <StyledTabPanel key={index}>
+                    return <Tab.Panel as={StyledTabPanel} key={index}>
                             {tab.content}
-                    </StyledTabPanel>
+                    </Tab.Panel>
                 })}
             </Tab.Panels>
         </Tab.Group>
