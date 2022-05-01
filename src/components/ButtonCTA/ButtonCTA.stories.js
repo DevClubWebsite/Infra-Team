@@ -9,11 +9,11 @@ export default {
 const Template = (args) => <ButtonCTA {...args} />;
 export const Regular = Template.bind({});
 Regular.args = {
-  label: "click me!",
+  children: "click me!",
   size: "regular",
 };
 export const Mobile = Template.bind({});
 Mobile.args = {
-  label: "click me!",
+  children: "click me!",
   size: "mobile",
 };

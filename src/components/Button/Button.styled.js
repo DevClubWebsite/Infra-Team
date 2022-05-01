@@ -8,8 +8,8 @@ export const StyledButton = styled.button`
   border: none;
   background: ${({ background }) => background};
   color: ${({ color }) => color};
-  ${({ variant }) =>
-    variant === "outlined" &&
+  ${({ as }) =>
+    as === "outlined" &&
     css`
       border: 1.5px solid ${({ color }) => color};
     `

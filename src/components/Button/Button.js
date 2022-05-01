@@ -1,15 +1,12 @@
-import React, { Children } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { StyledButton } from "./Button.styled";
-import GlobalStyles from "../../Theme/Global";
 import Theme from "../../Theme/Theme";
-import Typography from "../Typography/Typography";
-export default function Button({ background = Theme.background.dark, color = "none", variant = "regular", width, height, padding = 0.2, onclick, Component }) {
+export default function Button({ background = Theme.background.dark, color = "none", as = "regular", width = 10, height = 3, padding = 0.2, onclick, children }) {
   return (
     <>
-      <GlobalStyles />
-      <StyledButton onClick={() => onclick()} background={background} color={color} variant={variant} width={width} height={height} padding={padding}>
-        {Component}
+      <StyledButton onClick={() => onclick()} background={background} color={color} as={as} width={width} height={height} padding={padding}>
+        {children}
       </StyledButton>
     </>
   );
@@ -18,10 +15,9 @@ export default function Button({ background = Theme.background.dark, color = "no
 Button.propTypes = {
   background: PropTypes.string,
   color: PropTypes.string,
-  variant: PropTypes.oneOf(["regular", "outlined", "text"]),
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  as: PropTypes.oneOf(["regular", "outlined", "text"]),
+  width: PropTypes.number,
+  height: PropTypes.number,
   padding: PropTypes.number,
-  onclick: PropTypes.func,
-  component: PropTypes.any
+  onclick: PropTypes.func
 };
