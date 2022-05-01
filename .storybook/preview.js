@@ -1,3 +1,5 @@
+import Global from "../src/Theme/Global"
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +9,12 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  (Story) => (
+  <>
+    <Global/>
+    <Story />
+  </>
+  ),
+];
