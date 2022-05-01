@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import React from 'react';
 
 export const StyledTypography = ({ ...props }) => {
-    const Container = styled(props.variant)`
+    const Container = styled(props.as)`
         color: ${( props ) => props.color};
         ${( props ) => {
             props.weight && css`
