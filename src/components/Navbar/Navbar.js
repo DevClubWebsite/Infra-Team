@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import NavbarButton from "../NavbarButton/NavbarButton";
 
 function Navbar({ items, direction = "row", gap = 1}) {
-  const [focusedElement, setFocusedElement] = useState();
+  const [focusedElement, setFocusedElement] = useState(0);
 
   return (
     <>
