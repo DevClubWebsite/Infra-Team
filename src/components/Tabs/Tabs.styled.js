@@ -1,5 +1,4 @@
 import styled, {css} from 'styled-components';
-import { Tab } from '@headlessui/react';
 
 export const StyledTab = styled.button`
     min-width: ${({width}) => width}rem;
