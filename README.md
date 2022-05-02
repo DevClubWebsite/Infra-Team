@@ -25,7 +25,7 @@ function foo() {
 ```
 
 ## Components
-You can see the components and test their different options using [Storybook](https://6256f0c55149c8003a14e401-xjbjxabejy.chromatic.com/
+You can see the components and test their different options using [Storybook](https://6256f0c55149c8003a14e401-cvzgvhtjyd.chromatic.com/
 ).
 
 ### Button
