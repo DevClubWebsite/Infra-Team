@@ -20,7 +20,7 @@ export default function NavbarButton({text, url, focusedElement, setFocusedEleme
         href={url}
         onClick={() => changeColor(id)}
       >
-        {txet}
+        {text}
       </StyledNavbarButton>
     </>
   );
