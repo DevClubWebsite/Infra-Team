@@ -48,7 +48,7 @@ export default function Tabs({
                     >
                         <div onClick={() => changeSelectedTab(index)}>
                             <Typography color={index === selectedTab ? selectedcolor : color} as='p' size={fontsize}>
-                                {tab.label}
+                                {tab.text}
                             </Typography>
                         </div>
                     </Tab>
