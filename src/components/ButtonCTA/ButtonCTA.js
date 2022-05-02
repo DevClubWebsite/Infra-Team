@@ -8,7 +8,9 @@ function ButtonCTA({ children, size = "regular" }) {
   return (
     <>
       <StyledButtonCTA size={size}>
-        <Typography as="p" color="black" children={children} />
+        <Typography as="p" color="black">
+          {children}
+        </Typography>
         <ArrowDiv size={size}>
           <img src={Arrow} alt="arrow" />
         </ArrowDiv>
@@ -17,8 +19,7 @@ function ButtonCTA({ children, size = "regular" }) {
   );
 }
 ButtonCTA.propTypes = {
-  size: PropTypes.oneOf(["regular", "mobile"]),
-  color: PropTypes.string
+  size: PropTypes.oneOf(["regular", "mobile"])
 };
 
 export default ButtonCTA;
