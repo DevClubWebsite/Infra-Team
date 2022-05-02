@@ -210,7 +210,7 @@ function foo() {
 ```
 
 ### GlobalStyles
-This component includes CSS that should be used inside app.css.
+This component includes CSS that should be used inside App.css.
 
 ---
 
