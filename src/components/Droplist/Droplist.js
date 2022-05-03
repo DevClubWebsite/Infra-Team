@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Listbox } from "@headlessui/react";
-import Global from "../../Theme/Global";
 import { StyledTitle, StyledItem } from "./Droplist.styled";
 import Theme from "../../Theme/Theme";
 
-function Droplist({
-  items,
-  title,
-  background = Theme.background.dark,
-  color = Theme.typography.white,
-  width = 8,
-  height = 2,
-}) {
+function Droplist(args) {
+  const {
+    items,
+    title,
+    background = Theme.background.dark,
+    color = Theme.typography.white,
+    width = 8,
+    height = 2,
+    hover,
+  } = args;
   const [selectedItem, setSelectedItem] = useState(title);
 
   return (
     <>
-      <Global />
       <Listbox value={selectedItem} onChange={setSelectedItem}>
         <Listbox.Button
           as={StyledTitle}
@@ -26,7 +26,7 @@ function Droplist({
           width={width}
           height={height}
         >
-          {selectedItem != title ? selectedItem.label : title}
+          {selectedItem !== title ? selectedItem.text : title}
         </Listbox.Button>
         <Listbox.Options>
           {items.map((item, index) => (
@@ -35,12 +35,10 @@ function Droplist({
               key={index}
               value={item}
               disabled={item.disabled}
-              color={color}
-              background={background}
-              width={width}
-              height={height}
+              error={item.disabled}
+              {...args}
             >
-              {item.label}
+              {item.text}
             </Listbox.Option>
           ))}
         </Listbox.Options>
@@ -55,5 +53,6 @@ Droplist.propTypes = {
   background: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number,
+  hover: PropTypes.string,
 };
 export default Droplist;

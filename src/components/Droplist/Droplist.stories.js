@@ -3,7 +3,7 @@ import Droplist from "./Droplist";
 import Theme from "../../Theme/Theme";
 
 export default {
-  title: "Button/Dropdown List",
+  title: "Components/Buttons/Dropdown List",
   component: Droplist,
 };
 
@@ -13,20 +13,19 @@ Dropdown.args = {
   title: "title",
   items: [
     {
-      label: "1st option",
-      disabled: false,
+      text: "1st option",
     },
     {
-      label: "2nd option",
-      disabled: false,
+      text: "2nd option",
     },
     {
-      label: "disabled",
+      text: "disabled",
       disabled: true,
     },
   ],
   color: Theme.typography.white,
   background: Theme.background.dark,
+  hover: Theme.background.yellow,
   width: 8,
   height: 2,
 };

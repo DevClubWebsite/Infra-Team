@@ -25,4 +25,17 @@ export const StyledItem = styled.div`
   &:last-child {
     border-radius: 0 0 5px 5px;
   }
+  &:hover {
+    background: ${({ hover }) => hover};
+  }
+  ${({ pick }) =>
+    pick &&
+    css`
+      background: ${({ hover }) => hover};
+    `}
+  ${({ error }) =>
+    error &&
+    css`
+      cursor: not-allowed;
+    `}
 `;
