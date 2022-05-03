@@ -1,11 +1,15 @@
 {
   "name": "@dev-club/ds",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "Colman Dev Club Design System",
   "main": "dist/bundle.js",
   "private": false,
   "dependencies": {
+<<<<<<< HEAD
     "@headlessui/react": "^1.6.0",
+=======
+    "@headlessui/react": "^1.5.0",
+>>>>>>> cfdebf517f5a9dcb2bd7d135c397c3b12172419c
     "@rollup/plugin-commonjs": "^21.1.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
