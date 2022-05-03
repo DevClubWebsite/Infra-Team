@@ -1,16 +1,23 @@
 import React from "react";
 import { Menu } from "@headlessui/react";
 import PropTypes from "prop-types";
-import Global from "../../Theme/Global";
 import { StyledMenuButton, StyledItem } from "./DropMenu.styled";
-import Typography from "../Typography/Typography";
+import Theme from "../../Theme/Theme";
 
-function DropMenu({ title, items, width = 15, height = 3 }) {
+function DropMenu(args) {
+  const {
+    title,
+    items,
+    width = 15,
+    height = 3,
+    hover = Theme.background.yellow,
+    background = Theme.background.dark,
+    color = Theme.typography.white,
+  } = args;
   return (
     <>
-      <Global />
       <Menu>
-        <Menu.Button as={StyledMenuButton} width={width} height={height}>
+        <Menu.Button as={StyledMenuButton} {...args}>
           {title}
         </Menu.Button>
         <Menu.Items>
@@ -19,16 +26,10 @@ function DropMenu({ title, items, width = 15, height = 3 }) {
               <Menu.Item
                 as={StyledItem}
                 key={index}
-                width={width}
-                height={height}
+                active={({ active }) => active}
+                {...args}
               >
-                {
-                  <Typography
-                    color={item.color}
-                    variant={item.variant}
-                    label={item.label}
-                  />
-                }
+                {item.text}
               </Menu.Item>
             );
           })}
@@ -42,6 +43,9 @@ DropMenu.propTypes = {
   items: PropTypes.array.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
+  hover: PropTypes.string,
+  background: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default DropMenu;
