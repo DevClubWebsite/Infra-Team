@@ -25,7 +25,7 @@ function foo() {
 ```
 
 ## Components
-You can see the components and test their different options using [Storybook](https://6256f0c55149c8003a14e401-xjbjxabejy.chromatic.com/
+You can see the components and test their different options using [Storybook](https://6256f0c55149c8003a14e401-cvzgvhtjyd.chromatic.com/
 ).
 
 ### Button
@@ -33,19 +33,29 @@ You can see the components and test their different options using [Storybook](ht
 
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
-| label | String | - | - | True |
-| variant | String | "regular", "outlined", "text" | "regular" | False |
-| size | String | "small", "medium", "large", "extraLarge" | "medium" | False |
-| background | String | - | - | False |
-| color | String | - | - | False |
+| as | String | "regular", "outlined", "text" | "regular" | False |
+| width | Number | - | 10 | False |
+| height | Number | - | 3 | False |
+| padding | Number | - | 0.2 | False |
+| background | String | - | Theme.background.dark | False |
+| color | String | - | "none" | False |
+| onclick | Function | - | - | False |
 
 ##### Example:
 ```js
-import { Button } from '@dev-club/ds';
+import { Button, Typography, Theme } from '@dev-club/ds';
 
 function foo() {
+    const log = () => {
+        console.log('clicked!');
+    };
+    
     return (
-        <Button variant="outlined" label="Click Here!" />
+        <Button as="outlined" onclick={log}>
+            <Typography as='p' color={Theme.typograpghy.yellow}>
+                Click Here!
+            </Typography>
+        </Button>
     )
 };
 ```
@@ -55,16 +65,19 @@ function foo() {
 
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
-| label | String | - | - | True |
 | size | String | "regular", "mobile" | "regular" | False |
 
 ##### Example:
 ```js
-import { ButtonCTA } from '@dev-club/ds';
+import { ButtonCTA, Typograpghy } from '@dev-club/ds';
 
 function foo() {
     return (
-        <Button label="Click Here!" size="mobile" />
+        <Button size="mobile">
+            <Typograpghy as={p}>
+                Click Here!
+            </Typograpghy>
+        </Button>
     )
 };
 ```
@@ -74,18 +87,20 @@ function foo() {
 
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
-| label | String | - | - | True |
-| variant | String | "p", "h1"-"h6" | - | True |
+| as | String | "p", "h1"-"h6" | - | True |
 | color | String | - | - | True |
 | weight | Number | - | - | False |
+| size | Number | - | - | False |
 
 ##### Example:
 ```js
-import { Typography } from '@dev-club/ds';
+import { Typography, Theme } from '@dev-club/ds';
 
 function foo() {
     return (
-        <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
+        <Typography as="h1"  color={Theme.typography.dark}>
+            Topography is the study of the land surface.
+        <Typography />
     )
 };
 ```
@@ -105,8 +120,8 @@ import { Navbar } from '@dev-club/ds';
 
 function foo() {
     const arr = [
-        {label: 'Home', url: 'https://www.npmjs.com/package/@dev-club/ds'},
-        {label: 'About Us', url: 'https://www.npmjs.com/package/@dev-club/ds'}
+        {text: 'Home', url: 'https://www.npmjs.com/package/@dev-club/ds'},
+        {text: 'About Us', url: 'https://www.npmjs.com/package/@dev-club/ds'}
     ];
     return (
         <Navbar items={arr} gap={2} />
@@ -117,8 +132,8 @@ function foo() {
 #### Attributes:
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
-| width | String | - | 12.222 | False |
-| height | String | - | 14.222 | False |
+| width | Number | - | 12.222 | False |
+| height | Number | - | 14.222 | False |
 | color | String | - | Theme.background.yellow | False |
 | border | String | - | Theme.background.light | False |
 
@@ -128,52 +143,74 @@ import { Card } from "@dev-club/ds";
 
 function foo() {
    return (
-      <Card width="12.222" height="14.222" color="#000000" border="#FFFFFF">
-         <Typography variant="h1" label="Topography is the study of the land surface" color="black" />
+      <Card width={12.222} height={14.222} color="#000000" border="#FFFFFF">
+        <Typography as="h1"  color="black">
+            Topography is the study of the land surface
+        <Typography />
       </Card>
    );
 }
 ```
-### Theme
-##### Options:
-
-| Option | hex |
-| ------ | --- |
-| Theme.background.dark | #040413 |
-| Theme.background.light | #0A0A1B |
-| Theme.background.yellow | #F6C927 |
-| Theme.typography.white | #FFFFFF | 
-| Theme.typography.yellow | #F6C927 |
-| Theme.typography.dark | #0A0A1B |
-| Theme.typography.darker | #0E0E28 |
+### Tabs
+#### Attributes:
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| tabs | Array | - | - | True |
+| width | Number | - | - | True |
+| height | Number | - | - | True |
+| background | String | - | Theme.background.light | False |
+| selectedbackground | String | - | Theme.background.yellow | False |
+| border | String | - | "none" | False |
+| color (font) | String | - | Theme.typography.white | False |
+| selectedcolor (font) | String | - | Theme.typograpghy.dark | False | 
+| gap | Number | - | 1(rem) | False |
+| direction | String | "row", "column" | "row" | False |
+| space | Boolean | true, false | true | False |
+| fontsize | Number | - | 1 (rem) | False |
 
 ##### Example:
 ```js
-import { Theme } from '@dev-club/ds';
+import { Tabs, ButtonCTA } from "@dev-club/ds";
+    
+function foo() {
+    const arr = [
+        {text: 'Tab 1', content: 'content 1'},
+        {text: 'Tab 2', content: <ButtonCTA text="Click Here"/>}
+    ]
+    return (
+        <Tabs tabs={arr} width={10} height={6} />
+   );
+}
+```
+
+### Theme
+##### Options:
+###### Background
+- ![#040413](https://via.placeholder.com/15/040413/000000?text=+) `Theme.background.dark - #040413`
+- ![#0A0A1B](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.background.light - #0A0A1B`
+- ![#F6C927](https://via.placeholder.com/15/F6C927/000000?text=+) `Theme.background.yellow - #F6C927`
+###### Typography
+- ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `Theme.typography.white - #FFFFFF`
+- ![#F6C927](https://via.placeholder.com/15/F6C927/000000?text=+) `Theme.typography.yellow - #F6C927`
+- ![#0A0A1B](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.typography.dark - #0A0A1B`
+- ![#0E0E28](https://via.placeholder.com/15/0E0E28/000000?text=+) `Theme.typography.darker - #0E0E28`
+###### Border
+- ![#1F1F53](https://via.placeholder.com/15/1F1F53/000000?text=+) `Theme.border.blue - #1F1F53`
+
+##### Example:
+```js
+import { Theme, Typography } from '@dev-club/ds';
 
 function foo() {
     return (
-        <Button label="Click Here!" color={Theme.background.yellow}/>
-    )
+        <Typography as="h1"  color={Theme.typography.dark}>
+            Topography is the study of the land surface.
+        <Typography />
 };
 ```
 
 ### GlobalStyles
-This component includes CSS that should be used in all components.
-
-##### Example:
-```js
-import { Button, GlobalStyles } from '@dev-club/ds';
-
-function foo() {
-    return (
-        <>
-            <GlobalStyles />
-            <Button variant="outlined" label="Click Here!" />
-        <>
-    )
-};
-```
+This component includes CSS that should be used inside App.css.
 
 ---
 

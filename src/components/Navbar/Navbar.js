@@ -2,21 +2,19 @@ import React, { useState } from "react";
 import { StyledNavbar } from "./Navbar.styled";
 import PropTypes from "prop-types";
 import NavbarButton from "../NavbarButton/NavbarButton";
-import GlobalStyles from "../../Theme/Global";
 
-function Navbar({ items, direction = "row", gap = 1 }) {
-  const [focusedElement, setFocusedElement] = useState();
+function Navbar({ items, direction = "row", gap = 1}) {
+  const [focusedElement, setFocusedElement] = useState(0);
 
   return (
     <>
-      <GlobalStyles />
       <StyledNavbar direction={direction} gap={gap}>
         <ul>
           {items.map((item, index) => {
             return (
               <li key={index}>
                 <NavbarButton
-                  label={item.label}
+                  text={item.text}
                   url={item.url}
                   focusedElement={focusedElement}
                   setFocusedElement={setFocusedElement}

@@ -8,8 +8,8 @@ export const StyledButtonCTA = styled.button`
   background: ${Theme.background.yellow};
   border-radius: 0.227rem;
   padding: 0 0.227rem 0 0.833rem;
-  width: 15.444em;
-  height: 3.055em;
+  min-width: 15.444em;
+  min-height: 3.055em;
   font-size: 1rem;
   border: none;
   ${(props) =>
