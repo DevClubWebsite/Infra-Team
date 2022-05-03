@@ -2,7 +2,7 @@ import React from "react";
 import ButtonCTA from "./ButtonCTA";
 
 export default {
-  title: "Button/CTA",
+  title: "Components/Buttons/CTA Button",
   component: ButtonCTA,
 };
 

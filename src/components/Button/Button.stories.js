@@ -3,7 +3,7 @@ import Button from "./Button";
 import Theme from "../../Theme/Theme";
 
 export default {
-  title: "Button/Button",
+  title: "Components/Buttons/Simple Button",
   component: Button,
 };
 
@@ -16,7 +16,7 @@ Regular.args = {
   width: 10,
   height: 3,
   padding: 0.2,
-  children: "click me!"
+  children: "click me!",
 };
 export const Outlined = Template.bind({});
 Outlined.args = {
@@ -26,7 +26,7 @@ Outlined.args = {
   width: 10,
   height: 3,
   padding: 0.2,
-  children: "click me!"
+  children: "click me!",
 };
 export const Text = Template.bind({});
 Text.args = {
@@ -36,5 +36,5 @@ Text.args = {
   width: 10,
   height: 3,
   padding: 0.2,
-  children: "click me!"
+  children: "click me!",
 };
