@@ -1,8 +1,8 @@
 import styled, {css} from 'styled-components';
 
 export const StyledBox = styled.div`
-    min-width: ${({width}) => width*2}rem;
-    min-height: ${({height}) => height*2}rem;
+    min-width: ${({width, disclosures}) => width*disclosures}rem;
+    min-height: ${({height, disclosures}) => height*disclosures}rem;
     display: flex;
     flex-direction: column;
     background-color: ${({background}) => background};

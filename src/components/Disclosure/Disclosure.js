@@ -9,7 +9,7 @@ const openedStyle = {
 };
 
 export default function DisclosureStory({
-    Disclosures,
+    disclosures,
     width,
     height,
     background = Theme.background.light,
@@ -20,35 +20,22 @@ export default function DisclosureStory({
     {
         return (
             <>
-                <StyledBox width={width} height={height} background={background} border={border}>
-                    <Disclosure as={StyledDisclosure} width={width} height={height}>
+                <StyledBox disclosures={disclosures.length} width={width} height={height} background={background} border={border}>
+                {disclosures.map((disclosure, index) => {
+                    return <Disclosure key={index} as={StyledDisclosure} width={width} height={height}>
                     {({ open }) => (
                         <>
                         <Disclosure.Button as={StyledDisclosureButton} width={width} height={height} color={color} backgroundButton={backgroundButton}>
-                            <span>What is your refund policy?</span>
+                            <span>{disclosure.text}</span>
                             <StyledChevronUpIcon color={color} style={(open) ? openedStyle : {}}/>
                         </Disclosure.Button>
                         <Disclosure.Panel as={StyledDisclosurePanel} color={color}>
-                            If you're unhappy with your purchase for any reason, email us
-                            within 90 days and we'll refund you in full, no questions asked.
+                            {disclosure.content}
                         </Disclosure.Panel>
                         </>
                     )}
                     </Disclosure>
-                    <Disclosure as={StyledDisclosure} width={width} height={height}>
-                    {({ open }) => (
-                        <>
-                        <Disclosure.Button as={StyledDisclosureButton} width={width} height={height} color={color} backgroundButton={backgroundButton}>
-                            <span>What is your refund policy?</span>
-                            <StyledChevronUpIcon color={color} style={(open) ? openedStyle : {}}/>
-                        </Disclosure.Button>
-                        <Disclosure.Panel as={StyledDisclosurePanel} color={color}>
-                            If you're unhappy with your purchase for any reason, email us
-                            within 90 days and we'll refund you in full, no questions asked.
-                        </Disclosure.Panel>
-                        </>
-                    )}
-                    </Disclosure>
+                })}
                 </StyledBox>
             </>
         )
