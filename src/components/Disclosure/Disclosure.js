@@ -1,22 +1,17 @@
 import { Disclosure } from '@headlessui/react'
-import { ChevronUpIcon } from '@heroicons/react/solid'
 import PropTypes from "prop-types";
 import Theme from '../../Theme/Theme';
 import React from 'react';
-import { StyledBox, StyledDisclosure, StyledDisclosureButton, StyledDisclosurePanel } from "./Disclosure.styled"
+import { StyledBox, StyledDisclosure, StyledDisclosureButton, StyledDisclosurePanel, StyledChevronUpIcon } from "./Disclosure.styled"
 
 const openedStyle = {
-    transform: 'rotate(180deg)'
+    transform: 'rotate(45deg)'
 };
 
 export default function DisclosureStory({
     Disclosures,
-    gap = 1,
-    direction = 'row',
-    space = true,
     width,
     height,
-    fontsize = 1,
     background = Theme.background.light,
     border = Theme.background.dark,
     color = Theme.typography.white,
@@ -25,13 +20,13 @@ export default function DisclosureStory({
     {
         return (
             <>
-                <StyledBox gap={gap} direction={direction} space={`${space}`} width={width} height={height} background={background} border={border}>
+                <StyledBox width={width} height={height} background={background} border={border}>
                     <Disclosure as={StyledDisclosure} width={width} height={height}>
                     {({ open }) => (
                         <>
                         <Disclosure.Button as={StyledDisclosureButton} width={width} height={height} color={color} backgroundButton={backgroundButton}>
                             <span>What is your refund policy?</span>
-                            <ChevronUpIcon style={(open) ? openedStyle : {}} />
+                            <StyledChevronUpIcon color={color} style={(open) ? openedStyle : {}}/>
                         </Disclosure.Button>
                         <Disclosure.Panel as={StyledDisclosurePanel} color={color}>
                             If you're unhappy with your purchase for any reason, email us
@@ -40,12 +35,12 @@ export default function DisclosureStory({
                         </>
                     )}
                     </Disclosure>
-                    <Disclosure as={StyledDisclosure} width={width} height={height} background={background} border={border}>
+                    <Disclosure as={StyledDisclosure} width={width} height={height}>
                     {({ open }) => (
                         <>
                         <Disclosure.Button as={StyledDisclosureButton} width={width} height={height} color={color} backgroundButton={backgroundButton}>
                             <span>What is your refund policy?</span>
-                            <ChevronUpIcon style={(open) ? openedStyle : {}} />
+                            <StyledChevronUpIcon color={color} style={(open) ? openedStyle : {}}/>
                         </Disclosure.Button>
                         <Disclosure.Panel as={StyledDisclosurePanel} color={color}>
                             If you're unhappy with your purchase for any reason, email us
