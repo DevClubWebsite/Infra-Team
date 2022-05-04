@@ -6,6 +6,7 @@ import Typography from './components/Typography/Typography';
 import Card from './components/Card/Card';
 import GlobalStyles from './Theme/Global';
 import Tabs from './components/Tabs/Tabs';
+import DisclosureStory from './components/Disclosure/Disclosure';
 
 export {
   Button,
@@ -14,6 +15,7 @@ export {
   Typography,
   Card,
   Tabs,
+  DisclosureStory,
   Theme,
   GlobalStyles
 }
