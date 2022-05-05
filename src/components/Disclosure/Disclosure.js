@@ -25,18 +25,10 @@ export default function DisclosureStory({
   };
   return (
     <>
-      <StyledBox
-        width={width}
-        background={background}
-        border={border}
-      >
+      <StyledBox width={width} background={background} border={border}>
         {disclosures.map((disclosure, index) => {
           return (
-            <Disclosure
-              key={index}
-              as={StyledDisclosure}
-              width={width}
-            >
+            <Disclosure key={index} as={StyledDisclosure} width={width}>
               {({ open }) => (
                 <>
                   <Disclosure.Button
@@ -64,8 +56,10 @@ export default function DisclosureStory({
 }
 
 DisclosureStory.propTypes = {
+  disclosures: PropTypes.array.isRequired,
   width: PropTypes.number,
   background: PropTypes.string,
   border: PropTypes.string,
   color: PropTypes.string,
+  backgroundButton: PropTypes.string,
 };
