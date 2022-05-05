@@ -6,6 +6,8 @@ import Typography from "./components/Typography/Typography";
 import Card from "./components/Card/Card";
 import GlobalStyles from "./Theme/Global";
 import Tabs from "./components/Tabs/Tabs";
+import Droplist from "./components/Droplist/Droplist";
+import DropMenu from "./components/DropMenu/DropMenu";
 
 export {
   Button,
@@ -14,6 +16,8 @@ export {
   Typography,
   Card,
   Tabs,
+  Droplist,
+  DropMenu,
   Theme,
   GlobalStyles,
 };
