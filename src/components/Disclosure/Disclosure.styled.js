@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledBox = styled.div`
   width: ${({ width }) => width}rem;
@@ -18,7 +18,7 @@ export const StyledDisclosure = styled.div`
   align-items: center;
   flex-direction: column;
   min-width: ${({ width }) => width}rem;
-  padding: 0.2rem 0;
+  padding: 0.2rem 0.4rem;
 `;
 
 export const StyledDisclosureButton = styled.button`
@@ -27,7 +27,7 @@ export const StyledDisclosureButton = styled.button`
   align-items: center;
   font-size: 1rem;
   min-width: 100%;
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0.5rem;
   background: none;
   background-color: ${({ backgroundButton }) => backgroundButton};
   border: 1px solid ${({ border }) => border};
@@ -39,13 +39,3 @@ export const StyledDisclosurePanel = styled.div`
   padding-top: 1rem;
   color: ${({ color }) => color};
 `;
-
-// export const StyledChevronUpIcon = styled.i`
-//   transform: rotate(-135deg);
-//   -webkit-transform: rotate(-135deg);
-//   border: solid ${({ color }) => color};
-//   border-width: 0 3px 3px 0;
-//   display: inline-block;
-//   padding: 3px;
-//   margin: 0 1rem;
-// `;

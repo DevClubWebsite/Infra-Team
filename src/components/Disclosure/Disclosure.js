@@ -2,8 +2,8 @@ import { Disclosure } from "@headlessui/react";
 import PropTypes from "prop-types";
 import Theme from "../../Theme/Theme";
 import React from "react";
-import Typograpghy from '../Typography/Typography';
-import Arrow from '../../Images/dropdown-arrow-icon.svg';
+import Typograpghy from "../Typography/Typography";
+import Arrow from "../../Images/dropdown-arrow-icon.svg";
 
 import {
   StyledBox,
@@ -11,10 +11,6 @@ import {
   StyledDisclosureButton,
   StyledDisclosurePanel,
 } from "./Disclosure.styled";
-
-const openedStyle = {
-  transform: "rotate(45deg)",
-};
 
 export default function DisclosureStory({
   disclosures,
@@ -25,6 +21,9 @@ export default function DisclosureStory({
   color = Theme.typography.white,
   backgroundButton = Theme.background.yellow,
 }) {
+  const openedStyle = {
+    transform: "rotate(180deg)",
+  };
   return (
     <>
       <StyledBox
@@ -50,8 +49,10 @@ export default function DisclosureStory({
                     color={color}
                     backgroundButton={backgroundButton}
                   >
-                    <Typograpghy color={color} as="p">{disclosure.text}</Typograpghy>
-                    <img src={Arrow} alt=">" />
+                    <Typograpghy color={color} as="p">
+                      {disclosure.text}
+                    </Typograpghy>
+                    <img src={Arrow} alt=">" style={open ? openedStyle : {}} />
                   </Disclosure.Button>
                   <Disclosure.Panel as={StyledDisclosurePanel} color={color}>
                     {disclosure.content}
