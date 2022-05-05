@@ -82,6 +82,37 @@ function foo() {
 };
 ```
 
+### DropList
+##### Attributes:
+
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| title | String | - | - | True |
+| items | Array | - | - | True |
+| width | Number | - | 19.5 | False |
+| height | Number | - | 2.3 | False |
+| hover | String | - | Theme.background.yellow | False |
+| background | String | - | Theme.background.blue | False |
+| color | String | - | Theme.typography.white | False |
+
+##### Example:
+```js
+import { DropList } from '@dev-club/ds';
+
+function foo() {
+    const arr = [
+    { text: "1st option" },
+    { 
+    text: "2nd option",
+      disabled: true,
+    },
+  ],
+    return (
+        <DropList title="title" items={arr} />
+    )
+};
+```
+
 ### Typography
 ##### Attributes:
 
