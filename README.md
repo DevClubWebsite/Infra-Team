@@ -128,6 +128,35 @@ function foo() {
     )
 };
 ```
+### DropMenu
+##### Attributes:
+
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| title | String | - | - | True |
+| items | Array | - | - | True |
+| width | Number | - | 15 | False |
+| height | Number | - | 3 | False |
+| hover | String | - | Theme.background.yellow | False |
+| background | String | - | Theme.background.dark | False |
+| color | String | - | Theme.typography.white | False |
+
+##### Example:
+```js
+import { DropMenu } from '@dev-club/ds';
+
+function foo() {
+    const arr = [
+        {text: 'Home', url: 'https://www.npmjs.com/package/@dev-club/ds'},
+        {text: 'About Us', url: 'https://www.npmjs.com/package/@dev-club/ds'}
+    ];
+    return (
+        <DropMenu title="title" items={arr} />
+    )
+};
+```
+
+
 ### Card
 #### Attributes:
 | Attribute | Type | Options | Default | Required |
