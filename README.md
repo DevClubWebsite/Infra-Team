@@ -186,7 +186,38 @@ function foo() {
     )
 };
 ```
+### Disclosure
+##### Attributes:
 
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| disclosures | Array | - | - | True |
+| width | Number | - | 30 | False |
+| background | String | - | Theme.background.light | False |
+| color | String | - | Theme.typography.white | False |
+| border | String | - | Theme.background.dark | False |
+| backgroundButton | String | Theme.background.yellow | False |
+
+##### Example:
+```js
+import { Disclosure } from '@dev-club/ds';
+
+function foo() {
+    const arr = [
+        {
+            text: "What is your refund policy?",
+            content: "If you're unhappy with your purchase for any reason, email uswithin 90 days and we'll refund you in full, no questions asked."
+        },
+        {
+            text: "What is your refund policy?",
+            content: "If you're unhappy with your purchase for any reason, email uswithin 90 days and we'll refund you in full, no questions asked."
+        }
+    ];
+    return (
+        <Disclosure disclosures={arr} />
+    )
+};
+```
 
 ### Card
 #### Attributes:
@@ -236,7 +267,7 @@ function foo() {
     const arr = [
         {text: 'Tab 1', content: 'content 1'},
         {text: 'Tab 2', content: <ButtonCTA text="Click Here"/>}
-    ]
+    ];
     return (
         <Tabs tabs={arr} width={10} height={6} />
    );

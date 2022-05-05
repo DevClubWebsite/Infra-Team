@@ -14,7 +14,7 @@ import {
 
 export default function DisclosureStory({
   disclosures,
-  width,
+  width = 30,
   background = Theme.background.light,
   border = Theme.background.dark,
   color = Theme.typography.white,

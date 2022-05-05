@@ -8,6 +8,7 @@ import GlobalStyles from "./Theme/Global";
 import Tabs from "./components/Tabs/Tabs";
 import Droplist from "./components/Droplist/Droplist";
 import DropMenu from "./components/DropMenu/DropMenu";
+import Disclosure from './components/Disclosure/Disclosure';
 
 export {
   Button,
@@ -18,6 +19,7 @@ export {
   Tabs,
   Droplist,
   DropMenu,
+  Disclosure,
   Theme,
   GlobalStyles,
 };
