@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import Theme from "../../Theme/Theme";
 import React from "react";
 import Typograpghy from '../Typography/Typography';
+import Arrow from '../../Images/dropdown-arrow-icon.svg';
+
 import {
   StyledBox,
   StyledDisclosure,
   StyledDisclosureButton,
   StyledDisclosurePanel,
-  StyledChevronUpIcon,
 } from "./Disclosure.styled";
 
 const openedStyle = {
@@ -50,10 +51,7 @@ export default function DisclosureStory({
                     backgroundButton={backgroundButton}
                   >
                     <Typograpghy color={color} as="p">{disclosure.text}</Typograpghy>
-                    <StyledChevronUpIcon
-                      color={color}
-                      style={open ? openedStyle : {}}
-                    />
+                    <img src={Arrow} alt=">" />
                   </Disclosure.Button>
                   <Disclosure.Panel as={StyledDisclosurePanel} color={color}>
                     {disclosure.content}

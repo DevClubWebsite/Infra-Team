@@ -9,11 +9,7 @@ export const StyledBox = styled.div`
   background-color: ${({ background }) => background};
   border: 1px solid ${({ border }) => border};
   border-radius: 0.277rem;
-  padding: 0.2rem 0;
-
-  span {
-    max-width: ${({ width }) => width}rem;
-  }
+  padding: 0.2rem;
 `;
 
 export const StyledDisclosure = styled.div`
@@ -30,7 +26,7 @@ export const StyledDisclosureButton = styled.button`
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
-  min-width: 95%;
+  min-width: 100%;
   padding: 0.5rem 0.2rem;
   background: none;
   background-color: ${({ backgroundButton }) => backgroundButton};
@@ -44,12 +40,12 @@ export const StyledDisclosurePanel = styled.div`
   color: ${({ color }) => color};
 `;
 
-export const StyledChevronUpIcon = styled.i`
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-  border: solid ${({ color }) => color};
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  margin: 0 1rem;
-`;
+// export const StyledChevronUpIcon = styled.i`
+//   transform: rotate(-135deg);
+//   -webkit-transform: rotate(-135deg);
+//   border: solid ${({ color }) => color};
+//   border-width: 0 3px 3px 0;
+//   display: inline-block;
+//   padding: 3px;
+//   margin: 0 1rem;
+// `;

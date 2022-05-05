@@ -1,7 +1,7 @@
 import DisclosureStory from "./Disclosure";
 
 export default {
-  title: "Components/Disclosure",
+  title: "Components/Buttons/Disclosure",
   component: DisclosureStory,
 };
 
