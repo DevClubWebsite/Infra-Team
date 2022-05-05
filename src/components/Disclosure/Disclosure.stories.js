@@ -1,4 +1,5 @@
 import DisclosureStory from "./Disclosure";
+import Theme from "../../Theme/Theme";
 
 export default {
   title: "Components/Buttons/Disclosure",
