@@ -2,6 +2,7 @@ const Theme = {
   background: {
     dark: "#040413",
     light: "#0A0A1B",
+    blue: "#121231",
     yellow: "#F6C927"
   },
   border: {

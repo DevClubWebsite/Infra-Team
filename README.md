@@ -188,6 +188,7 @@ function foo() {
 ###### Background
 - ![#040413](https://via.placeholder.com/15/040413/000000?text=+) `Theme.background.dark - #040413`
 - ![#0A0A1B](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.background.light - #0A0A1B`
+- ![#121231](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.background.blue - #121231`
 - ![#F6C927](https://via.placeholder.com/15/F6C927/000000?text=+) `Theme.background.yellow - #F6C927`
 ###### Typography
 - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `Theme.typography.white - #FFFFFF`
