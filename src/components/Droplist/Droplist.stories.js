@@ -24,8 +24,8 @@ Dropdown.args = {
     },
   ],
   color: Theme.typography.white,
-  background: Theme.background.dark,
+  background: Theme.background.blue,
   hover: Theme.background.yellow,
-  width: 8,
-  height: 2,
+  width: 19.5,
+  height: 2.3,
 };

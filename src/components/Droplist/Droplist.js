@@ -3,15 +3,16 @@ import PropTypes from "prop-types";
 import { Listbox } from "@headlessui/react";
 import { StyledTitle, StyledItem } from "./Droplist.styled";
 import Theme from "../../Theme/Theme";
+import Arrow from "../../Images/dropdown-arrow-icon.svg";
 
 function Droplist(args) {
   const {
     items,
     title,
-    background = Theme.background.dark,
+    background = Theme.background.blue,
     color = Theme.typography.white,
-    width = 8,
-    height = 2,
+    width = 19.5,
+    height = 2.3,
     hover,
   } = args;
   const [selectedItem, setSelectedItem] = useState(title);
@@ -27,6 +28,7 @@ function Droplist(args) {
           height={height}
         >
           {selectedItem !== title ? selectedItem.text : title}
+          <img src={Arrow} alt=">" />
         </Listbox.Button>
         <Listbox.Options>
           {items.map((item, index) => (
