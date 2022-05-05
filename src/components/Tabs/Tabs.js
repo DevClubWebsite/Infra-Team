@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 export default function Tabs({
     tabs,
     gap = 1,
-    direction = 'row',
+    direction = 'column',
     space = true,
     width,
     height,
