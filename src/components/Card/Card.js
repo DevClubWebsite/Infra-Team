@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Card({ width = 12.222, height = 14.222, color = "#F6C927", border, children}) {
     return (
-        <>.
+        <>
         <StyledCard width={width} height={height} color={color} border={border}>
             {children}
         </StyledCard>

@@ -82,6 +82,37 @@ function foo() {
 };
 ```
 
+### DropList
+##### Attributes:
+
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| title | String | - | - | True |
+| items | Array | - | - | True |
+| width | Number | - | 19.5 | False |
+| height | Number | - | 2.3 | False |
+| hover | String | - | Theme.background.yellow | False |
+| background | String | - | Theme.background.blue | False |
+| color | String | - | Theme.typography.white | False |
+
+##### Example:
+```js
+import { DropList } from '@dev-club/ds';
+
+function foo() {
+    const arr = [
+    { text: "1st option" },
+    { 
+    text: "2nd option",
+      disabled: true,
+    },
+  ],
+    return (
+        <DropList title="title" items={arr} />
+    )
+};
+```
+
 ### Typography
 ##### Attributes:
 
@@ -128,6 +159,35 @@ function foo() {
     )
 };
 ```
+### DropMenu
+##### Attributes:
+
+| Attribute | Type | Options | Default | Required |
+| --------- | ---- | ------- | ---- | -------- |
+| title | String | - | - | True |
+| items | Array | - | - | True |
+| width | Number | - | 15 | False |
+| height | Number | - | 3 | False |
+| hover | String | - | Theme.background.yellow | False |
+| background | String | - | Theme.background.dark | False |
+| color | String | - | Theme.typography.white | False |
+
+##### Example:
+```js
+import { DropMenu } from '@dev-club/ds';
+
+function foo() {
+    const arr = [
+        {text: 'Home', url: 'https://www.npmjs.com/package/@dev-club/ds'},
+        {text: 'About Us', url: 'https://www.npmjs.com/package/@dev-club/ds'}
+    ];
+    return (
+        <DropMenu title="title" items={arr} />
+    )
+};
+```
+
+
 ### Card
 #### Attributes:
 | Attribute | Type | Options | Default | Required |
@@ -188,6 +248,7 @@ function foo() {
 ###### Background
 - ![#040413](https://via.placeholder.com/15/040413/000000?text=+) `Theme.background.dark - #040413`
 - ![#0A0A1B](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.background.light - #0A0A1B`
+- ![#121231](https://via.placeholder.com/15/0A0A1B/000000?text=+) `Theme.background.blue - #121231`
 - ![#F6C927](https://via.placeholder.com/15/F6C927/000000?text=+) `Theme.background.yellow - #F6C927`
 ###### Typography
 - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `Theme.typography.white - #FFFFFF`
