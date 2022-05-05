@@ -2,12 +2,12 @@ import React from "react";
 import Navbar from "./Navbar";
 
 export default {
-  title: "Components/Navbar",
+  title: "Components/Navbar & Menu",
   component: Navbar,
 };
 const Template = (args) => <Navbar {...args} />;
-export const Primary = Template.bind({});
-Primary.args = {
+export const Nav = Template.bind({});
+Nav.args = {
   items: [
     { text: "Home", url: "#" },
     { text: "About Us", url: "#" },
