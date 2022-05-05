@@ -15,7 +15,6 @@ import {
 export default function DisclosureStory({
   disclosures,
   width,
-  height,
   background = Theme.background.light,
   border = Theme.background.dark,
   color = Theme.typography.white,
@@ -28,7 +27,6 @@ export default function DisclosureStory({
     <>
       <StyledBox
         width={width}
-        height={height}
         background={background}
         border={border}
       >
@@ -38,14 +36,12 @@ export default function DisclosureStory({
               key={index}
               as={StyledDisclosure}
               width={width}
-              height={height}
             >
               {({ open }) => (
                 <>
                   <Disclosure.Button
                     as={StyledDisclosureButton}
                     width={width}
-                    height={height}
                     color={color}
                     backgroundButton={backgroundButton}
                   >

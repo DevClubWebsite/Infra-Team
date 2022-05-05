@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const StyledBox = styled.div`
   width: ${({ width }) => width}rem;
@@ -36,6 +36,6 @@ export const StyledDisclosureButton = styled.button`
 `;
 
 export const StyledDisclosurePanel = styled.div`
-  padding-top: 1rem;
+  padding: 0.5rem;
   color: ${({ color }) => color};
 `;
