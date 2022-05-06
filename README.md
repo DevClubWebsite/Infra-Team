@@ -82,7 +82,7 @@ function foo() {
 };
 ```
 
-### DropList
+### Droplist
 ##### Attributes:
 
 | Attribute | Type | Options | Default | Required |
@@ -97,7 +97,7 @@ function foo() {
 
 ##### Example:
 ```js
-import { DropList } from '@dev-club/ds';
+import { Droplist } from '@dev-club/ds';
 
 function foo() {
     const arr = [
@@ -108,7 +108,7 @@ function foo() {
     },
   ],
     return (
-        <DropList title="title" items={arr} />
+        <Droplist title="title" items={arr} />
     )
 };
 ```
