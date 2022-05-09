@@ -37,7 +37,7 @@ export default function DisclosureStory({
                     color={color}
                     backgroundButton={backgroundButton}
                   >
-                    <Typograpghy color={color} as="p">
+                    <Typograpghy color={color} variant="p">
                       {disclosure.text}
                     </Typograpghy>
                     <img src={Arrow} alt=">" style={open ? openedStyle : {}} />
