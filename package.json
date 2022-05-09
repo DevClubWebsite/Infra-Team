@@ -1,6 +1,6 @@
 {
   "name": "@dev-club/ds",
-  "version": "1.2.3",
+  "version": "1.2.5",
   "description": "Colman Dev Club Design System",
   "main": "dist/bundle.js",
   "private": false,

@@ -3621,7 +3621,7 @@ function $e(e) {
 var styled = qe;
 
 const StyledButton = styled.button`
-  padding: 0.2rem;
+  padding: 0.5rem;
   min-width: ${({
   width
 }) => width}rem;
@@ -3637,8 +3637,8 @@ const StyledButton = styled.button`
   color
 }) => color};
   ${({
-  as
-}) => as === "outlined" && Ae`
+  variant
+}) => variant === "outlined" && Ae`
       border: 1.5px solid ${({
   color
 }) => color};
@@ -3649,6 +3649,7 @@ const Theme = {
   background: {
     dark: "#040413",
     light: "#0A0A1B",
+    blue: "#121231",
     yellow: "#F6C927"
   },
   border: {
@@ -3665,7 +3666,7 @@ const Theme = {
 function Button({
   background = Theme.background.dark,
   color = "none",
-  as = "regular",
+  variant = "regular",
   width = 10,
   height = 3,
   padding = 0.2,
@@ -3676,7 +3677,7 @@ function Button({
     onClick: () => onclick(),
     background: background,
     color: color,
-    as: as,
+    variant: variant,
     width: width,
     height: height,
     padding: padding
@@ -3685,7 +3686,7 @@ function Button({
 Button.propTypes = {
   background: PropTypes.string,
   color: PropTypes.string,
-  as: PropTypes.oneOf(["regular", "outlined", "text"]),
+  variant: PropTypes.oneOf(["regular", "outlined", "text"]),
   width: PropTypes.number,
   height: PropTypes.number,
   padding: PropTypes.number,
@@ -3720,46 +3721,46 @@ const ArrowDiv = styled.div`
     `}
 `;
 
-var img = "data:image/svg+xml,%3csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.9285 5.88406L18.6987 6.72233H17.5603H0.714239C0.671812 6.72233 0.621553 6.7403 0.577448 6.78832C0.532032 6.83777 0.5 6.91328 0.5 7C0.5 7.08672 0.532034 7.16223 0.577448 7.21168C0.621552 7.2597 0.67181 7.27767 0.714239 7.27767H17.5603H18.6987L17.9285 8.11594L13.4331 13.009C13.4331 13.009 13.4331 13.009 13.4331 13.009C13.4109 13.0332 13.3912 13.0642 13.3772 13.1012C13.3631 13.1382 13.3554 13.1791 13.3554 13.2213C13.3554 13.2636 13.3631 13.3045 13.3772 13.3415C13.3913 13.3785 13.4109 13.4095 13.4331 13.4337C13.4553 13.4578 13.4793 13.4745 13.5024 13.4849C13.5255 13.4953 13.5485 13.5 13.5706 13.5C13.5926 13.5 13.6156 13.4953 13.6387 13.4849C13.6619 13.4745 13.6858 13.4578 13.708 13.4337L19.4219 7.21237L19.4223 7.21191C19.4445 7.1878 19.4642 7.1569 19.4782 7.11999C19.4923 7.08305 19.5 7.04216 19.5 7C19.5 6.95784 19.4923 6.91695 19.4782 6.88001C19.4642 6.8431 19.4445 6.8122 19.4223 6.78809L19.4219 6.78763L13.708 0.566278C13.6858 0.542158 13.6619 0.525522 13.6387 0.515062C13.6156 0.504665 13.5926 0.5 13.5706 0.5C13.5485 0.5 13.5255 0.504665 13.5024 0.515062C13.4793 0.525522 13.4553 0.542158 13.4331 0.566278C13.4109 0.590484 13.3913 0.621477 13.3772 0.658458C13.3631 0.695472 13.3554 0.736428 13.3554 0.778651C13.3554 0.820875 13.3631 0.861831 13.3772 0.898844C13.3912 0.935795 13.4109 0.966768 13.4331 0.990966C13.4331 0.990985 13.4331 0.991005 13.4331 0.991024L17.9285 5.88406Z' stroke='%23F6C927'/%3e%3c/svg%3e";
+var img$1 = "data:image/svg+xml,%3csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.9285 5.88406L18.6987 6.72233H17.5603H0.714239C0.671812 6.72233 0.621553 6.7403 0.577448 6.78832C0.532032 6.83777 0.5 6.91328 0.5 7C0.5 7.08672 0.532034 7.16223 0.577448 7.21168C0.621552 7.2597 0.67181 7.27767 0.714239 7.27767H17.5603H18.6987L17.9285 8.11594L13.4331 13.009C13.4331 13.009 13.4331 13.009 13.4331 13.009C13.4109 13.0332 13.3912 13.0642 13.3772 13.1012C13.3631 13.1382 13.3554 13.1791 13.3554 13.2213C13.3554 13.2636 13.3631 13.3045 13.3772 13.3415C13.3913 13.3785 13.4109 13.4095 13.4331 13.4337C13.4553 13.4578 13.4793 13.4745 13.5024 13.4849C13.5255 13.4953 13.5485 13.5 13.5706 13.5C13.5926 13.5 13.6156 13.4953 13.6387 13.4849C13.6619 13.4745 13.6858 13.4578 13.708 13.4337L19.4219 7.21237L19.4223 7.21191C19.4445 7.1878 19.4642 7.1569 19.4782 7.11999C19.4923 7.08305 19.5 7.04216 19.5 7C19.5 6.95784 19.4923 6.91695 19.4782 6.88001C19.4642 6.8431 19.4445 6.8122 19.4223 6.78809L19.4219 6.78763L13.708 0.566278C13.6858 0.542158 13.6619 0.525522 13.6387 0.515062C13.6156 0.504665 13.5926 0.5 13.5706 0.5C13.5485 0.5 13.5255 0.504665 13.5024 0.515062C13.4793 0.525522 13.4553 0.542158 13.4331 0.566278C13.4109 0.590484 13.3913 0.621477 13.3772 0.658458C13.3631 0.695472 13.3554 0.736428 13.3554 0.778651C13.3554 0.820875 13.3631 0.861831 13.3772 0.898844C13.3912 0.935795 13.4109 0.966768 13.4331 0.990966C13.4331 0.990985 13.4331 0.991005 13.4331 0.991024L17.9285 5.88406Z' stroke='%23F6C927'/%3e%3c/svg%3e";
 
 const StyledTypography = ({ ...props
 }) => {
-  const Container = styled(props.as)`
-        color: ${props => props.color};
-        ${props => {
+  const Container = styled(props.variant)`
+    color: ${props => props.color};
+    ${props => {
     props.weight && Ae`
-                font-weight: ${props.weight};
-            `;
+          font-weight: ${props.weight};
+        `;
   }}
-        ${({
+    ${({
     size
   }) => {
     if (size) {
       return Ae`
-                    font-size: ${size}rem;
-                `;
+          font-size: ${size}rem;
+        `;
     }
   }}
-    `;
+  `;
   return /*#__PURE__*/React__default["default"].createElement(Container, props);
 };
 
 function Typography({
   children = 'Text',
-  as,
+  variant,
   color,
   weight,
   size
 }) {
   return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(StyledTypography, {
     weight: weight,
-    as: as,
+    variant: variant,
     color: color,
     size: size
   }, children));
 }
 Typography.propTypes = {
-  as: PropTypes.oneOf(["p", "h1", "h2", "h3", "h4", "h5", "h6"]).isRequired,
+  variant: PropTypes.oneOf(["p", "h1", "h2", "h3", "h4", "h5", "h6"]).isRequired,
   color: PropTypes.string.isRequired,
   weight: PropTypes.number,
   size: PropTypes.number
@@ -3772,12 +3773,12 @@ function ButtonCTA({
   return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(StyledButtonCTA, {
     size: size
   }, /*#__PURE__*/React__default["default"].createElement(Typography, {
-    as: "p",
+    variant: "p",
     color: "black"
   }, children), /*#__PURE__*/React__default["default"].createElement(ArrowDiv, {
     size: size
   }, /*#__PURE__*/React__default["default"].createElement("img", {
-    src: img,
+    src: img$1,
     alt: "arrow"
   }))));
 }
@@ -3824,7 +3825,7 @@ function NavbarButton({
     color: color,
     href: url,
     onClick: () => changeColor(id)
-  }, txet));
+  }, text));
 }
 
 function Navbar({
@@ -3882,7 +3883,7 @@ function Card({
   border,
   children
 }) {
-  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, ".", /*#__PURE__*/React__default["default"].createElement(StyledCard, {
+  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(StyledCard, {
     width: width,
     height: height,
     color: color,
@@ -7508,7 +7509,7 @@ const StyledTabList = styled.div`
 function Tabs({
   tabs,
   gap = 1,
-  direction = 'row',
+  direction = 'column',
   space = true,
   width,
   height,
@@ -7544,7 +7545,7 @@ function Tabs({
       onClick: () => changeSelectedTab(index)
     }, /*#__PURE__*/React__default["default"].createElement(Typography, {
       color: index === selectedTab ? selectedcolor : color,
-      as: "p",
+      variant: "p",
       size: fontsize
     }, tab.text)));
   })), /*#__PURE__*/React__default["default"].createElement(De.Panels, null, tabs.map((tab, index) => {
@@ -7569,9 +7570,339 @@ Tabs.propTypes = {
   fontsize: PropTypes.number
 };
 
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+const StyledTitle = styled.button`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1rem;
+  width: ${({
+  width
+}) => width}rem;
+  height: ${({
+  height
+}) => height}rem;
+  background: ${({
+  background
+}) => background};
+  color: ${({
+  color
+}) => color};
+  border-radius: 0.277rem;
+  cursor: pointer;
+  margin-bottom: -3px;
+`;
+const StyledItem$1 = styled.div`
+  width: ${({
+  width
+}) => width}rem;
+  height: ${({
+  height
+}) => height}rem;
+  line-height: ${({
+  height
+}) => height}rem;
+  background: ${({
+  background
+}) => background};
+  color: ${({
+  color
+}) => color};
+  cursor: pointer;
+  padding-left: 1em;
+  border-top: 1px solid ${({
+  color
+}) => color};
+  position: relative;
+  z-index: 1;
+  &:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  &:hover {
+    background: ${({
+  hover
+}) => hover};
+  }
+  ${({
+  pick
+}) => pick && Ae`
+      background: ${({
+  hover
+}) => hover};
+    `}
+  ${({
+  error
+}) => error && Ae`
+      cursor: not-allowed;
+    `}
+`;
+
+var img = "data:image/svg+xml,%3csvg width='13' height='7' viewBox='0 0 13 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.1429 1.19209e-07L6.5 4.375L1.85714 1.19209e-07L4.76837e-07 0.875L6.5 7L13 0.875L11.1429 1.19209e-07Z' fill='white'/%3e%3c/svg%3e";
+
+function Droplist(args) {
+  const {
+    items,
+    title,
+    background = Theme.background.blue,
+    color = Theme.typography.white,
+    width = 19.5,
+    height = 2.3,
+    hover
+  } = args;
+  const [selectedItem, setSelectedItem] = React.useState(title);
+  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(Ee, {
+    value: selectedItem,
+    onChange: setSelectedItem
+  }, /*#__PURE__*/React__default["default"].createElement(Ee.Button, {
+    as: StyledTitle,
+    color: color,
+    background: background,
+    width: width,
+    height: height
+  }, selectedItem !== title ? selectedItem.text : title, /*#__PURE__*/React__default["default"].createElement("img", {
+    src: img,
+    alt: ">"
+  })), /*#__PURE__*/React__default["default"].createElement(Ee.Options, null, items.map((item, index) => /*#__PURE__*/React__default["default"].createElement(Ee.Option, _extends({
+    as: StyledItem$1,
+    key: index,
+    value: item,
+    disabled: item.disabled,
+    error: item.disabled
+  }, args), item.text)))));
+}
+
+Droplist.propTypes = {
+  items: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  background: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  hover: PropTypes.string
+};
+
+const StyledMenuButton = styled.button`
+  text-align: left;
+  border-radius: 5px;
+  background: ${({
+  background
+}) => background};
+  font-size: 1em;
+  padding: 0 0 0 1em;
+  min-width: ${({
+  width
+}) => width}em;
+  min-height: ${({
+  height
+}) => height}em;
+  color: ${({
+  color
+}) => color};
+  margin-bottom: 5px;
+  cursor: pointer;
+`;
+const StyledItem = styled.a`
+  cursor: pointer;
+  display: block;
+  padding: 0 0 0 1em;
+  background: ${({
+  background
+}) => background};
+  width: ${({
+  width
+}) => width}em;
+  height: ${({
+  height
+}) => height}em;
+  line-height: ${({
+  height
+}) => height}em;
+  color: ${({
+  color
+}) => color};
+  border-bottom: 1px solid ${({
+  color
+}) => color};
+  ${({
+  active,
+  hover
+}) => active && Ae`
+      &:hover {
+        background: ${hover};
+      }
+    `}
+  &:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 5px 5px;
+    border: none;
+  }
+  &:only-child {
+    border-radius: 5px;
+    border: none;
+  }
+`;
+
+function DropMenu(args) {
+  const {
+    title,
+    items,
+    width = 15,
+    height = 3,
+    hover = Theme.background.yellow,
+    background = Theme.background.dark,
+    color = Theme.typography.white
+  } = args;
+  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(Ze, null, /*#__PURE__*/React__default["default"].createElement(Ze.Button, _extends({
+    as: StyledMenuButton
+  }, args), title), /*#__PURE__*/React__default["default"].createElement(Ze.Items, null, items.map((item, index) => {
+    return /*#__PURE__*/React__default["default"].createElement(Ze.Item, _extends({
+      as: StyledItem,
+      key: index,
+      active: ({
+        active
+      }) => active
+    }, args), item.text);
+  }))));
+}
+
+DropMenu.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  hover: PropTypes.string,
+  background: PropTypes.string,
+  color: PropTypes.string
+};
+
+const StyledBox = styled.div`
+  width: ${({
+  width
+}) => width}rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: ${({
+  background
+}) => background};
+  border: 1px solid ${({
+  border
+}) => border};
+  border-radius: 0.277rem;
+  padding: 0.2rem;
+`;
+const StyledDisclosure = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: ${({
+  width
+}) => width}rem;
+  padding: 0.2rem 0.4rem;
+`;
+const StyledDisclosureButton = styled.button`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  min-width: 100%;
+  padding: 0.5rem 0.5rem;
+  background: none;
+  background-color: ${({
+  backgroundButton
+}) => backgroundButton};
+  border: 1px solid ${({
+  border
+}) => border};
+  border-radius: 0.277rem;
+  color: ${({
+  color
+}) => color};
+`;
+const StyledDisclosurePanel = styled.div`
+  padding: 0.5rem;
+  color: ${({
+  color
+}) => color};
+`;
+
+function DisclosureStory({
+  disclosures,
+  width = 30,
+  background = Theme.background.light,
+  border = Theme.background.dark,
+  color = Theme.typography.white,
+  backgroundButton = Theme.background.yellow
+}) {
+  const openedStyle = {
+    transform: "rotate(180deg)"
+  };
+  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(StyledBox, {
+    width: width,
+    background: background,
+    border: border
+  }, disclosures.map((disclosure, index) => {
+    return /*#__PURE__*/React__default["default"].createElement(Ye, {
+      key: index,
+      as: StyledDisclosure,
+      width: width
+    }, ({
+      open
+    }) => /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(Ye.Button, {
+      as: StyledDisclosureButton,
+      width: width,
+      color: color,
+      backgroundButton: backgroundButton
+    }, /*#__PURE__*/React__default["default"].createElement(Typography, {
+      color: color,
+      variant: "p"
+    }, disclosure.text), /*#__PURE__*/React__default["default"].createElement("img", {
+      src: img,
+      alt: ">",
+      style: open ? openedStyle : {}
+    })), /*#__PURE__*/React__default["default"].createElement(Ye.Panel, {
+      as: StyledDisclosurePanel,
+      color: color
+    }, disclosure.content)));
+  })));
+}
+DisclosureStory.propTypes = {
+  disclosures: PropTypes.array.isRequired,
+  width: PropTypes.number,
+  background: PropTypes.string,
+  border: PropTypes.string,
+  color: PropTypes.string,
+  backgroundButton: PropTypes.string
+};
+
 exports.Button = Button;
 exports.ButtonCTA = ButtonCTA;
 exports.Card = Card;
+exports.Disclosure = DisclosureStory;
+exports.DropMenu = DropMenu;
+exports.Droplist = Droplist;
 exports.GlobalStyles = GlobalStyles;
 exports.Navbar = Navbar;
 exports.Tabs = Tabs;
