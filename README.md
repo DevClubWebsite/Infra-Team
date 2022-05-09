@@ -33,7 +33,7 @@ You can see the components and test their different options using [Storybook](ht
 
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
-| as | String | "regular", "outlined", "text" | "regular" | False |
+| variant | String | "regular", "outlined", "text" | "regular" | False |
 | width | Number | - | 10 | False |
 | height | Number | - | 3 | False |
 | padding | Number | - | 0.2 | False |
@@ -51,7 +51,7 @@ function foo() {
     };
     
     return (
-        <Button as="outlined" onclick={log}>
+        <Button variant="outlined" onclick={log}>
             <Typography as='p' color={Theme.typograpghy.yellow}>
                 Click Here!
             </Typography>
