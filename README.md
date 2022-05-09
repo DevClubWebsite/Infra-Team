@@ -43,7 +43,7 @@ You can see the components and test their different options using [Storybook](ht
 
 ##### Example:
 ```js
-import { Button, Typography, Theme } from '@dev-club/ds';
+import { Button } from '@dev-club/ds';
 
 function foo() {
     const log = () => {
@@ -52,9 +52,7 @@ function foo() {
     
     return (
         <Button variant="outlined" onclick={log}>
-            <Typography as='p' color={Theme.typograpghy.yellow}>
-                Click Here!
-            </Typography>
+            Click Here!
         </Button>
     )
 };
@@ -69,14 +67,12 @@ function foo() {
 
 ##### Example:
 ```js
-import { ButtonCTA, Typograpghy } from '@dev-club/ds';
+import { ButtonCTA } from '@dev-club/ds';
 
 function foo() {
     return (
         <Button size="mobile">
-            <Typograpghy as={p}>
-                Click Here!
-            </Typograpghy>
+            Click Here!
         </Button>
     )
 };
