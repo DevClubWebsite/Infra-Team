@@ -10,7 +10,7 @@ export default {
 const Template = (args) => <Button {...args} />;
 export const Regular = Template.bind({});
 Regular.args = {
-  as: "regular",
+  variant: "regular",
   background: Theme.background.yellow,
   color: "black",
   width: 10,
@@ -20,7 +20,7 @@ Regular.args = {
 };
 export const Outlined = Template.bind({});
 Outlined.args = {
-  as: "outlined",
+  variant: "outlined",
   background: "none",
   color: Theme.background.yellow,
   width: 10,
@@ -30,7 +30,7 @@ Outlined.args = {
 };
 export const Text = Template.bind({});
 Text.args = {
-  as: "text",
+  variant: "text",
   background: "none",
   color: Theme.background.yellow,
   width: 10,
