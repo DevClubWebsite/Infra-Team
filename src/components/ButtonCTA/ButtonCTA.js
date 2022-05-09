@@ -8,7 +8,7 @@ function ButtonCTA({ children, size = "regular" }) {
   return (
     <>
       <StyledButtonCTA size={size}>
-        <Typography as="p" color="black">
+        <Typography variant="p" color="black">
           {children}
         </Typography>
         <ArrowDiv size={size}>
