@@ -114,7 +114,7 @@ function foo() {
 
 | Attribute | Type | Options | Default | Required |
 | --------- | ---- | ------- | ---- | -------- |
-| as | String | "p", "h1"-"h6" | - | True |
+| variant | String | "p", "h1"-"h6" | - | True |
 | color | String | - | - | True |
 | weight | Number | - | - | False |
 | size | Number | - | - | False |
@@ -125,7 +125,7 @@ import { Typography, Theme } from '@dev-club/ds';
 
 function foo() {
     return (
-        <Typography as="h1"  color={Theme.typography.dark}>
+        <Typography variant="h1"  color={Theme.typography.dark}>
             Topography is the study of the land surface.
         <Typography />
     )
@@ -231,7 +231,7 @@ import { Card } from "@dev-club/ds";
 function foo() {
    return (
       <Card width={12.222} height={14.222} color="#000000" border="#FFFFFF">
-        <Typography as="h1"  color="black">
+        <Typography variant="h1"  color="black">
             Topography is the study of the land surface
         <Typography />
       </Card>
@@ -291,7 +291,7 @@ import { Theme, Typography } from '@dev-club/ds';
 
 function foo() {
     return (
-        <Typography as="h1"  color={Theme.typography.dark}>
+        <Typography variant="h1"  color={Theme.typography.dark}>
             Topography is the study of the land surface.
         <Typography />
 };
